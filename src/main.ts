@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
-import './style.css'
+// import './style.css'
 import App from './App.vue'
+import router from './router';
 
 import PrimeVue from 'primevue/config';
 import 'primevue/resources/primevue.min.css'
@@ -22,6 +23,7 @@ import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 
 
+
 const app = createApp(App);
 app.use(PrimeVue);
 
@@ -40,4 +42,5 @@ app.component('Image', Image);
 app.component('Badge', Badge);
 app.directive('badge', BadgeDirective);
 
+app.use(router);
 app.mount('#app');
