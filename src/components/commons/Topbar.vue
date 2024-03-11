@@ -1,5 +1,5 @@
 <template>
-    <header class="flex flex-row gap-1 align-items-center justify-content-center gap-3">
+    <header class="w-full flex flex-row gap-1 align-items-center justify-content-center gap-1">
         <button class="flex cursor-pointer border-none bg-transparent align-items-center">
             <img class="h-full bg-cover" src="../../assets/images/logo/logo.png" alt="">       
         </button>
@@ -9,13 +9,14 @@
                 <InputIcon class="pi pi-search"> </InputIcon>
                 <InputText placeholder="What are you looking for..." class="" />
             </IconField>        
-            <div class="flex flex-row gap-2">
+            <div class="flex flex-row gap-2 ">
                 <Dropdown v-model="selectedLanguage" :options="lenguages" placeholder="Select Language" class="" />
                 <Dropdown v-model="selectedMoney" :options="denominations" placeholder="Select Money" class="" />
             </div>
         </div>
     </header>
 </template>
+
 
 <script lang="ts">
     export default {
@@ -36,6 +37,5 @@
     }
 </script>
 
-<style>
-   
+<style>   
 </style>
