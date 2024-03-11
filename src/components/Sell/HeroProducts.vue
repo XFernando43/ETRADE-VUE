@@ -1,7 +1,7 @@
 <template>       
     
     <div class="card">
-        <Carousel :value="products" :numVisible="3" :numScroll="1" :responsiveOptions="responsiveOptions" circular :autoplayInterval="1000">
+        <Carousel :value="products" :numVisible="3" :numScroll="1" circular :autoplayInterval="4000">
             <template #item="slotProps">
                 <div class="border-1 surface-border border-round m-2 p-3">
                     <div class="mb-3">
@@ -20,7 +20,7 @@
 
     
     <div class="card">
-        <Carousel :value="products" :numVisible="1" :numScroll="1" :responsiveOptions="responsiveOptions">
+        <Carousel :value="products" :numVisible="1" :numScroll="1" >
             <template #item="slotProps">
                 <div class="border-1 surface-border border-round m-2 p-3">
                     <div class="mb-3">
