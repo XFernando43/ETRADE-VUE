@@ -4,7 +4,7 @@
         <Card class="shadow-4 w-17rem h-14rem flex flex-column justify-content-center align-items-center">
             <template #header>
                 <div class="mt-5">
-                    <img src="../../assets/images/icons/service1.png">
+                    <img class="w-full" src="../../assets/images/icons/service1.png">
                 </div>
             </template>
             <template #title>

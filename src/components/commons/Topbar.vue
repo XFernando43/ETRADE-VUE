@@ -92,6 +92,14 @@
         justify-content: space-between;
         margin-inline: 20em;
         padding-inline: 3rem;
+        background-color: white;
+
+        /* position: fixed;
+		top: 0;
+		left: 0;
+        z-index: 10; */
+        
+    
     }
 
     .input{
