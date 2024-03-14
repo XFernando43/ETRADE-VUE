@@ -19,7 +19,7 @@
 
 
     
-    <div class="card">
+    <!-- <div class="card">
         <Carousel :value="products" :numVisible="1" :numScroll="1" >
             <template #item="slotProps">
                 <div class="border-1 surface-border border-round m-2 p-3">
@@ -40,7 +40,7 @@
                 </div>
             </template>
         </Carousel>
-    </div>
+    </div> -->
 
 
 

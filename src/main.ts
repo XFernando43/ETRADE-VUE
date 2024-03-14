@@ -21,6 +21,8 @@ import BadgeDirective from 'primevue/badgedirective';
 import InputText from 'primevue/inputtext';
 import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
+import Card from 'primevue/card';
+
 
 
 
@@ -38,6 +40,7 @@ app.component('CascadeSelect', CascadeSelect);
 app.component('Carousel', Carousel);
 app.component('Tag', Tag);
 app.component('Image', Image);
+app.component('Card', Card);
 
 app.component('Badge', Badge);
 app.directive('badge', BadgeDirective);
