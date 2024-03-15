@@ -11,17 +11,18 @@
 
         <body>
 
-            <Carousel :showIndicators="false" :showNavigators="false" :value="products" :numVisible="5" :numScroll="1" circular :autoplayInterval="4000">
+            <Carousel :showIndicators="false" :showNavigators="false" :value="products" :numVisible="5" :numScroll="1" circular :autoplayInterval="34000">
                 <template #item="slotProps">
 
-                    <div class="flex flex-column gap-2 border-3 border-blue-50 border-round m-2 p-3 surface-100 relative">
+                    <div class="m-2 p-3 flex flex-column gap-2 border-3 border-blue-50 border-round surface-200 relative">
 
-                        <header class="flex flex-column gap-1 align-items-start">
+                        <header class="flex flex-column align-items-start">
                             <h1>Full Sleev Tshirt</h1>
-                            <div class="flex flex-row gap-2">
+                            <div class="flex flex-row gap-2 mb-3">
                                 <span class="font-bold hover:text-pink-500">$299.99</span>    
-                                <span class="line-through text-bluegray-500 font-semibold">$299.99</span>    
+                                <span class="line-through text-bluegray-500 font-semibold">$299.99</span>
                             </div>
+                            <Rating v-model="value" disabled :cancel="false"/>
                         </header>
                         
                         
@@ -29,9 +30,12 @@
                             <img src="../../assets/images/product/fashion/product-18.png" 
                                     class="w-full imgAnimation" preview />                            
                         </body>
+                        
+                        <Button class="absolute border-2 border-blue-50 surface-100 border-circle text-black-alpha-90 hover:text-white-alpha-90 hover:bg-blue-500 hover:shadow-6" 
+                                style="right: 20px; top: -10px;">
+                            <i class="pi pi-shopping-cart"/>
+                        </Button>
 
-
-                        <Tag value="UnStock" severity="danger" class="absolute" style="right: 20px; top: 5px" />
                     </div>
 
                 </template>
@@ -46,7 +50,12 @@
 
 
 <script>
+    
+    import { ref } from 'vue';
+    const value = ref(5);
+
 export default{
+
     data(){
         return{
             products: [
@@ -125,10 +134,14 @@ export default{
     .imgAnimation{
         transition: all 0.3s ease; 
     }
-    
     .imgAnimation:hover{
         transform: scale(0.80);
     }
-
+    .prueba{
+        color: black;
+    }
+    .prueba:hover{
+        color: white;
+    }
 
 </style>

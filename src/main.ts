@@ -22,6 +22,7 @@ import InputText from 'primevue/inputtext';
 import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import Card from 'primevue/card';
+import Rating from 'primevue/rating';
 
 
 
@@ -41,6 +42,7 @@ app.component('Carousel', Carousel);
 app.component('Tag', Tag);
 app.component('Image', Image);
 app.component('Card', Card);
+app.component('Rating', Rating);
 
 app.component('Badge', Badge);
 app.directive('badge', BadgeDirective);
