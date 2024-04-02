@@ -11,7 +11,7 @@
 
         <body>
 
-            <Carousel :showIndicators="false" :showNavigators="false" :value="products" :numVisible="5" :numScroll="1" circular :autoplayInterval="34000">
+            <Carousel :showIndicators="false" :showNavigators="false" :value="products" :numVisible="5" :numScroll="1" circular :autoplayInterval="4000">
                 <template #item="slotProps">
 
                     <div class="m-2 p-3 flex flex-column gap-2 border-3 border-blue-50 border-round surface-200 relative">

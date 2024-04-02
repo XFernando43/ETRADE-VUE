@@ -2,7 +2,7 @@
 
     <h1>
         About US
-    </h1>
+    </h1> 
     
 </template>
 
@@ -10,7 +10,7 @@
     export default{
         data(){
             return{
-
+                
             }
         }
     }
