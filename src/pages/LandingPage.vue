@@ -27,8 +27,8 @@
   </div>
 
   <!-- Clients -->
-  <section class="flex flex-column gap-4 p-8" style="background-color: #12141d">
-    <h2 class="text-white font-bold text-5xl Slabo">Nuestros Clientes</h2>
+  <section class="flex flex-column gap-4 p-8" style="background-color: #12141d;">
+    <h2 class="text-white font-bold text-6xl Slabo">Nuestros Clientes</h2>
 
     <div class="carousel-container">
       <div class="carousel">
@@ -40,6 +40,24 @@
           class="carousel-item img"
         />
       </div>
+    </div>
+  </section>
+
+  <!-- Seccion de servicios -->
+  <section class="flex flex-column gap-2 p-8" style="background-color: #1b1d2c;">
+    
+    <h3 class="text-white font-bold text-7xl Slabo">Mis Servicios</h3>
+    <div class="flex flex-row gap-6">
+
+      <div v-for="(serviceItem, index) in service" :key="index" class="relative border-round-2xl overflow-hidden service-img-width">
+        <img :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full" style="object-fit: cover;">
+        <div class="absolute bottom-0 left-0 p-3 text-white max-w-full max-h-full" style="background-color: rgba(0, 0, 0, 0.9);">
+          <h3 class="Slabo text-white text-4xl font-normal line-height-2">{{ serviceItem.title }}</h3>
+          <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
+        </div>
+      </div>
+
+
     </div>
   </section>
 </template>
@@ -60,6 +78,26 @@ export default {
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe2696fd3c91d5a387fa4_Rappi_logo.svg-p-500.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/609ace96c2b34f5ebc9a44f8_kushki.png",
       ],
+      service: [
+        {
+          url: "https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwxNHx8U2FsZXN8ZW58MHx8fHwxNzExNzM3Nzg1fDA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90",
+          title: "Asesoramiento personalizado de ventas",
+          description:
+            "Optimizamos tus estrategias de ventas para maximizar resultados.",
+        },
+        {
+          url: "https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1556740758-90de374c12ad%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHw1fHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90",
+          title: "Capacitación en técnicas de venta",
+          description:
+            "Optimizamos tus estrategias de ventas para maximizar resultados.",
+        },
+        {
+          url: "https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1556740758-90de374c12ad%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHw1fHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90",
+          title: "Análisis de mercado y competidores",
+          description:
+            "Obten información clave para destacarte en el mercado y superar a la competencia..",
+        },
+      ],
     };
   },
 };
@@ -67,12 +105,17 @@ export default {
 
 <style scoped>
 .img-transparent {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(36, 32, 32, 0.5)),
     url("https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw2fHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA&ixlib=rb-4.0.3&q=80&w=1080");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 53rem;
+}
+
+.service-img-width{
+  width: 490px;
+  height: 720px;
 }
 
 .title-width {
@@ -133,4 +176,32 @@ export default {
   }
 }
 
+/* Define la animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Comienza con opacidad 0 */
+  }
+  to {
+    opacity: 1; /* Termina con opacidad 1 */
+  }
+}
+
+/* Aplica la animación de entrada a las imágenes */
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 16px; /* Espacio entre las imágenes */
+  animation: fadeIn 0.5s ease-in-out; /* Aplica la animación de entrada */
+}
+
+/* Agrega un retraso progresivo a cada imagen */
+.carousel-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.carousel-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.carousel-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+/* Y así sucesivamente para cada imagen */
 </style>

@@ -152,3 +152,7 @@ body {
 /* Fuentes */
 @import url("../src/assets/styles/3-elements/fuentes.css");
 @import url("../src/assets/styles/1-settings/fontsFamilies.css");
+
+:root {
+  --transition-duration: 0.2s;
+}
