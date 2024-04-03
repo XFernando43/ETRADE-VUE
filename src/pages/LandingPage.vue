@@ -45,10 +45,8 @@
 
   <!-- Seccion de servicios -->
   <section class="flex flex-column gap-2 p-8" style="background-color: #1b1d2c;">
-    
     <h3 class="text-white font-bold text-7xl Slabo">Mis Servicios</h3>
     <div class="flex flex-row gap-6">
-
       <div v-for="(serviceItem, index) in service" :key="index" class="relative border-round-2xl overflow-hidden service-img-width">
         <img :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full" style="object-fit: cover;">
         <div class="absolute bottom-0 left-0 p-3 text-white max-w-full h-12rem" style="background-color: rgba(0, 0, 0, 0.9);">
@@ -56,10 +54,33 @@
           <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
         </div>
       </div>
-
-
     </div>
   </section>
+
+  <!-- about us -->
+  <section class="p-8" style="background-color: #1b1d2c;">
+    <div class="flex flex-row gap-8 align-items-center justify-content-center">
+      <img style="max-width: 800px; height: 700px;" 
+           class="border-round-xl"
+           src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90" alt="">
+           
+      <div class="flex flex-column gap-4 text-left" style="max-width: 700px;">
+        <h3 class="text-white font-semibold Slabo text-7xl">Sobre Nosotros</h3>
+        <p class="text-white Robot">
+          Somos Kombox, una empresa de ventas ubicada en Perú. Nos especializamos en ofrecer soluciones efectivas para impulsar el crecimiento de su negocio.
+        </p>    
+        <p class="text-white Robot">
+          Nuestro equipo está comprometido en brindar un servicio excepcional y resultados sobresalientes para nuestros clientes. Confíe en nosotros para llevar su estrategia de ventas al siguiente nivel.
+        </p>
+        <Button class="p-3 max-w-8rem"> Learn More </Button>
+      </div>
+    </div>
+
+  </section>
+
+  
+
+
 </template>
 
 <script lang="ts">
