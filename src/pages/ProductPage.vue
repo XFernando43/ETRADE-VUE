@@ -6,7 +6,7 @@
     <PolicesItems></PolicesItems>
     <ThisWeekend></ThisWeekend>
     <HeroProducts></HeroProducts>
-    <testing></testing>
+    <!-- <testing></testing> -->
 </template>
 
 <script lang="ts">
