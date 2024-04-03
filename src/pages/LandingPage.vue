@@ -51,8 +51,8 @@
 
       <div v-for="(serviceItem, index) in service" :key="index" class="relative border-round-2xl overflow-hidden service-img-width">
         <img :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full" style="object-fit: cover;">
-        <div class="absolute bottom-0 left-0 p-3 text-white max-w-full max-h-full" style="background-color: rgba(0, 0, 0, 0.9);">
-          <h3 class="Slabo text-white text-4xl font-normal line-height-2">{{ serviceItem.title }}</h3>
+        <div class="absolute bottom-0 left-0 p-3 text-white max-w-full h-12rem" style="background-color: rgba(0, 0, 0, 0.9);">
+          <h3 class="Slabo text-white text-4xl font-normal line-height-2 max-w-21rem">{{ serviceItem.title }}</h3>
           <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
         </div>
       </div>
