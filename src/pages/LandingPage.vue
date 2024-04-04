@@ -190,7 +190,7 @@
   <section class="">
 
     <div class="relative">
-      <iframe :src="location" width="100%" height="450" style="border: 0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe :src="location" width="100%" height="750" style="border: 0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <div class="p-4 w-30rem border-round-md text-white absolute" style="background-color: #232336; top: 50%; left: 70%;">
         <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
         <span>Perú</span>
@@ -238,7 +238,7 @@ export default {
             "Optimizamos tus estrategias de ventas para maximizar resultados.",
         },
         {
-          url: "https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1556740758-90de374c12ad%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHw1fHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90",
+          url: "https://images.unsplash.com/photo-1591696205602-2f950c417cb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw4fHxTYWxlc3xlbnwwfHx8fDE3MTIyNDIyMjB8MA&ixlib=rb-4.0.3&q=80&w=1080",
           title: "Análisis de mercado y competidores",
           description:
             "Obten información clave para destacarte en el mercado y superar a la competencia..",
@@ -299,6 +299,7 @@ export default {
 </script>
 
 <style scoped>
+
 .price-img-animation:hover {
   transform: scale(1.15);
   transition: transform 0.5s ease;
