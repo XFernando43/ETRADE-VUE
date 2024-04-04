@@ -144,56 +144,48 @@
   </section>
 
   <!-- get in contact -->
-
-  <section class="p-7 " style="background-color: #1e1e2c;">
-
-    <div class="flex flex-row justify-content-center gap-4 text-white" style="width: 1440px;">
-
-
+  <section class="p-7 flex flex-column justify-content-center align-items-center" style="background-color: #232336;">
+    <div class="flex flex-row justify-content-center gap-4 text-white " style="width: 1440px;">
+      
       <div class="flex flex-column gap-4 justify-content-center p-4">
         <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
         <p class="Robot text-lg">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
       </div>
 
-      <form class="flex flex-column gap-4 p-4">
-
+      <form class="flex flex-column gap-3 p-4">
         <head class="flex flex-row gap-2">
-
           <div class="flex flex-column gap-2">
             <div class="flex flex-column gap-2">
               <label for="Nombre">Nombre</label>
-              <InputText id="Nombre" />
+              <InputText id="Nombre" class=" p-1 w-full text-white" style="background-color: transparent;" />
             </div>
           </div>
-
           <div class="flex flex-column gap-2">
             <div class="flex flex-column gap-2">
               <label for="correo">Correo Electronico</label>
-              <InputText id="correo" />
+              <InputText id="correo" class=" p-1 w-full text-white" style="background-color: transparent;"/>
             </div>
           </div>
-
         </head>
-
-
         <body>
-
           <div class="flex flex-column gap-2">
             <div class="flex flex-column gap-2">
               <label for="mensaje">Mensaje</label>
-              <Textarea rows="7" cols="30" />
+              <Textarea rows="7" cols="10" class="w-full p-1 text-white" style="background-color: transparent;"/>
             </div>
           </div>
-
         </body>
 
+        <div class="flex flex-row justify-content-between gap-2">
+          <p class="max-w-20rem text-xs">Este sitio está protegido por reCAPTCHA y Google política de privacidad y Términos de servicio aplicar.</p>
+          <Button class="justify-content-center font-normal p-2 w-5rem">Enviar</Button>
+        </div>
 
       </form>
 
-
     </div>
-
   </section>
+
 
 </template>
 
@@ -304,6 +296,7 @@ export default {
 .service-img-width {
   width: 490px;
   height: 720px;
+
 }
 
 .title-width {
