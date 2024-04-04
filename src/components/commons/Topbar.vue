@@ -1,47 +1,27 @@
 <template>
-
-    <header class="p-2 flex justify-content-center ">
-
-        <div class="flex flex-row ">
-
+    <header class="p-3 flex justify-content-center ">
+        <div class="flex flex-row gap-3">
             <div>
-
-                <button class="flex cursor-pointer border-none bg-transparent align-items-center" @click="search">
+                <button class="flex cursor-pointer m-0 border-none bg-transparent align-items-center" @click="search">
                     <img class="h-full bg-cover" src="../../assets/images/logo/logo.png" alt="">
                 </button>
-
-
             </div>
-
             <div class="flex flex-row align-items-center gap-2">
-
-                <!-- input de texto -->
-                
                 <div class="flex gap-2">
-                    
                     <IconField iconPosition="left" class="">
                         <InputIcon class="pi pi-search"></InputIcon>
-                        <InputText placeholder="Search" />
-
+                        <InputText placeholder="what are you looking for ..."  class="w-30rem"/>
                     </IconField>
-                    
                 </div>
-
-
                 <div class="flex flex-row gap-2">
                     <Dropdown v-model="selectedLanguage" :options="lenguages" placeholder="Select Language"
-                        class="font-bold" />
+                        class="font-semibold" />
                     <Dropdown v-model="selectedMoney" :options="denominations" placeholder="Select Money"
-                        class="font-bold" />
+                        class="font-semibold" />
                 </div>
-
             </div>
-
-
         </div>
-
     </header>
-
 </template>
 
 <script lang="ts">
