@@ -33,28 +33,38 @@
   </section>
 
   <!-- Seccion de servicios -->
-  <section class="flex flex-column gap-2 p-8" style="background-color: #1b1d2c">
-    <h3 class="text-white font-bold text-7xl Slabo">Mis Servicios</h3>
-    <div class="flex flex-row gap-6">
-      <div v-for="(serviceItem, index) in service" :key="index"
-        class="relative border-round-2xl overflow-hidden service-img-width">
-        <img preview :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full"
-          style="object-fit: cover" />
-        <div class="absolute bottom-0 left-0 p-3 text-white max-w-full h-12rem"
-          style="background-color: rgba(0, 0, 0, 0.9)">
-          <h3 class="Slabo text-white text-4xl font-normal line-height-2 max-w-21rem">
-            {{ serviceItem.title }}
-          </h3>
-          <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
+  <section class="flex flex-column align-items-center gap-2 p-5" style="background-color: #1b1d2c">
+
+    <div class="p-3 text-white">
+
+      <h3 class=" font-normal text-7xl Slabo">Mis Servicios</h3>
+      <div class="flex flex-row gap-6">
+        <div v-for="(serviceItem, index) in service" :key="index"
+          class="relative border-round-2xl overflow-hidden service-img-width">
+          <img preview :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full"
+            style="object-fit: cover" />
+          <div class="absolute bottom-0 left-0 p-3 max-w-full h-12rem"
+            style="background-color: rgba(0, 0, 0, 0.9)">
+            <h3 class="Slabo text-4xl font-normal line-height-2 max-w-21rem">
+              {{ serviceItem.title }}
+            </h3>
+            <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
+          </div>
         </div>
       </div>
+
     </div>
+
+
+
+
   </section>
+
 
   <!-- about us -->
   <section class="p-8" style="background-color: #1b1d2c">
     <div class="flex flex-row gap-8 align-items-center justify-content-center">
-      <Image style="max-width: 800px; height: 700px" preview
+      <Image style="max-width: 850px; height: 700px" preview
         class="border-round-xl border-round block w-full h-full overflow-hidden"
         src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
         alt="">
@@ -77,6 +87,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Precios -->
 
@@ -138,7 +149,7 @@
   <section class="p-7 " style="background-color: #1e1e2c;">
 
     <div class="flex flex-row justify-content-center gap-4 text-white" style="width: 1440px;">
-      
+
 
       <div class="flex flex-column gap-4 justify-content-center p-4">
         <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
@@ -162,7 +173,7 @@
               <InputText id="correo" />
             </div>
           </div>
-          
+
         </head>
 
 
@@ -176,8 +187,8 @@
           </div>
 
         </body>
-       
-       
+
+
       </form>
 
 
