@@ -1,58 +1,41 @@
-<template>       
-    
-    <div class="card">
-        <Carousel :value="products" :numVisible="3" :numScroll="1" circular :autoplayInterval="4000">
-            
-            <template #item="slotProps">
-                <div class="border-1 surface-border border-round m-2 p-3">
-                    <div class="mb-3">
-                        <div class="relative mx-auto">
-                            <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" class="w-full border-round" preview />
-                            <Tag value="Stock" severity="success" class="absolute" style="left: 5px; top: 5px" />
-                        </div>
-                    </div>
-                    <div class="mb-3 font-bold">{{ slotProps.data.name }}</div>
-                    <div class="mb-3 font-medium">{{ slotProps.data.price }}</div>
-                </div>
-            </template>
+<template>
+    <div class="flex flex-row justify-content-center gap-3 ">
 
-        </Carousel>
+        <div class="card max-w-30rem shadow-7">
+            <Carousel :value="products" :showNavigators="false" :numVisible="1" :numScroll="1" circular :autoplayInterval="4000">
+                <template #item="slotProps">
+                    <div class="">
+                        <div class="mb-3">
+                            <div class="relative mx-auto">
+                                <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg"
+                                    class="w-full border-round" preview />
+                                <Tag value="Stock" severity="success" class="absolute" style="left: 5px; top: 5px" />
+                            </div>
+                        </div>
+                        <div class="mb-3 font-bold">{{ slotProps.data.name }}</div>
+                        <div class="mb-3 font-medium">{{ slotProps.data.price }}</div>
+                    </div>
+                </template>
+            </Carousel>
+        </div>
+
+        <!-- Recordar cambiarlo con la api debe haber una sección de Ofertas -->
+        <div class="flex flex-column justify-content-center text-center border-round-lg shadow-7">
+            <Image src="https://milanobagsstore.com/images_product/cartera-tote-bag-ds-3403-color-marron-1-large.png" alt="Image" width="250"/>
+            <label>Stylish Leather Bag</label>
+            <span>$29.99</span>
+        </div>
+ 
+
+
     </div>
-
-
-    
-    <!-- <div class="card">
-        <Carousel :value="products" :numVisible="1" :numScroll="1" >
-            <template #item="slotProps">
-                <div class="border-1 surface-border border-round m-2 p-3">
-                    <div class="mb-3">
-                        <div class="relative mx-auto">
-                            <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" class="w-full border-round" />
-                            <Tag value="Stock" severity="success" class="absolute" style="left: 5px; top: 5px" />
-                        </div>
-                    </div>
-                    <div class="mb-3 font-medium">{{ slotProps.data.name }}</div>
-                    <div class="flex justify-content-between align-items-center">
-                        <div class="mt-0 font-semibold text-xl">${{ slotProps.data.price }}</div>
-                        <span>
-                            <Button icon="pi pi-heart" severity="secondary" outlined />
-                            <Button icon="pi pi-shopping-cart" class="ml-2"/>
-                        </span>
-                    </div>
-                </div>
-            </template>
-        </Carousel>
-    </div> -->
-
-
-
 
 
 
 
 </template>
 
-<script>
+<script lang="ts">
 export default {
     data() {
         return {
@@ -129,8 +112,6 @@ export default {
 </script>
 
 <style></style>
-
-
 
 <!-- <div class="shadow-3 surface-card p-3">
     <Carousel :value="products" :numVisible="1" :numScroll="1" orientation="horizontal" 
