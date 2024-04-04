@@ -55,16 +55,13 @@
 
     </div>
 
-
-
-
   </section>
 
 
   <!-- about us -->
-  <section class="p-8" style="background-color: #1b1d2c">
-    <div class="flex flex-row gap-8 align-items-center justify-content-center">
-      <Image style="max-width: 850px; height: 700px" preview
+  <section class="p-8 flex flex-column align-items-center" style="background-color: #1b1d2c">
+    <div class="flex flex-row gap-8 align-items-center">
+      <Image style="max-width: 780px; height: 450px" preview
         class="border-round-xl border-round block w-full h-full overflow-hidden"
         src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
         alt="">
