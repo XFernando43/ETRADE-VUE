@@ -43,8 +43,7 @@
           class="relative border-round-2xl overflow-hidden service-img-width">
           <img preview :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full"
             style="object-fit: cover" />
-          <div class="absolute bottom-0 left-0 p-3 max-w-full h-12rem"
-            style="background-color: rgba(0, 0, 0, 0.9)">
+          <div class="absolute bottom-0 left-0 p-3 max-w-full h-12rem" style="background-color: rgba(0, 0, 0, 0.9)">
             <h3 class="Slabo text-4xl font-normal line-height-2 max-w-21rem">
               {{ serviceItem.title }}
             </h3>
@@ -88,37 +87,40 @@
 
   <!-- Precios -->
 
-  <section class="pt-5 pb-8 flex flex-column gap-4" style="background-color: #1b1e2c;">
-    <h3 class="text-white font-bold text-7xl Slabo text-center">
-      Tabla de Precios
-    </h3>
-    <div class="flex flex-row justify-content-center gap-3 text-white Slabo">
-      <!-- Aca es el v-for -->
-      <div v-for="(priceItem, index) in Prices" :key="index"
-        class="flex flex-column gap-2 border-white-alpha-90 border-1 border-round p-3 max-w-25rem price-img-animation"
-        style="background-color: #1b1e2c">
-        <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
+  <section class="pt-5 pb-8 gap-4" style="background-color: #1b1e2c;">
 
-        <Tag v-if="priceItem.popular === true" class="max-w-5rem h-2rem border-round-xl" severity="info"
-          value="Popular"></Tag>
+    <div class="flex flex-column gap-3 p-3 text-white">
 
-        <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
-        <div class="flex flex-column" style="line-height: 25px">
-          <span class="text-2xl">${{ priceItem.price }}</span>
-          <span>Por venta</span>
+      <h3 class="font-bold text-7xl Slabo text-center">Tabla de Precios</h3>
+      <div class="flex flex-row justify-content-center gap-3 text-white Slabo">
+        <!-- Aca es el v-for -->
+        <div v-for="(priceItem, index) in Prices" :key="index"
+          class="flex flex-column gap-2 border-white-alpha-90 border-1 border-round p-3 price-img-animation"
+          style="background-color: #1b1e2c; width: 450px; max-height: 680px;">
+          <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
+
+          <Tag v-if="priceItem.popular === true" class="max-w-5rem h-2rem border-round-xl" severity="info"
+            value="Popular"></Tag>
+
+          <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
+          <div class="flex flex-column" style="line-height: 25px">
+            <span class="text-2xl">${{ priceItem.price }}</span>
+            <span>Por venta</span>
+          </div>
+          <Button class="justify-content-center p-2 Roboto" severity="info">Mas Informacion</Button>
+
+          <p class="Roboto text-lg">{{ priceItem.description }}</p>
+
+          <ul class="list-none">
+            <li v-for="(descriptionItem, index) in priceItem.functionalities" :key="index"
+              class="flex flex-row gap-3 align-items-center">
+              <i class="pi pi-check"></i>
+              {{ descriptionItem }}
+            </li>
+          </ul>
         </div>
-        <Button class="justify-content-center p-2 Roboto" severity="info">Mas Informacion</Button>
-
-        <p class="Roboto text-lg">{{ priceItem.description }}</p>
-
-        <ul class="list-none">
-          <li v-for="(descriptionItem, index) in priceItem.functionalities" :key="index"
-            class="flex flex-row gap-3 align-items-center">
-            <i class="pi pi-check"></i>
-            {{ descriptionItem }}
-          </li>
-        </ul>
       </div>
+
     </div>
 
   </section>
