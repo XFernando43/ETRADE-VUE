@@ -191,7 +191,7 @@
 
     <div class="relative">
       <iframe :src="location" width="100%" height="750" style="border: 0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="p-4 w-30rem border-round-md text-white absolute" style="background-color: #232336; top: 50%; left: 70%;">
+      <div class="p-4 w-29rem h-auto border-round-md text-white absolute" style="background-color: #232336; top: 20%; left: 70%;">
         <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
         <span>Perú</span>
       </div>
