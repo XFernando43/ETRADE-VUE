@@ -199,9 +199,10 @@
     
   </section>
 
-  <section style="background-color: #232336;">
-    <div>
-
+  <section class="p-8 text-white align-items-center" style="background-color: #232336;">
+    <div class="flex flex-column gap-6 text-center">
+      <h1 class="text-4xl Slabo font-semibold">Kombox</h1>
+      <p class="Roboto font-normal text-xl">Made it with VueJS</p>
     </div>
   </section>
 
