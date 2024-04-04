@@ -69,7 +69,7 @@
       </Image>
 
       <div class="flex flex-column gap-4 text-left" style="max-width: 700px">
-        <h3 class="text-white font-semibold Slabo text-7xl">Sobre Nosotros</h3>
+        <h3 class="text-white font-normal Slabo text-7xl">Sobre Nosotros</h3>
         <p class="text-white Robot">
           Somos Kombox, una empresa de ventas ubicada en Perú. Nos
           especializamos en ofrecer soluciones efectivas para impulsar el
