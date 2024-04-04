@@ -2,6 +2,7 @@
     
     <div class="card">
         <Carousel :value="products" :numVisible="3" :numScroll="1" circular :autoplayInterval="4000">
+            
             <template #item="slotProps">
                 <div class="border-1 surface-border border-round m-2 p-3">
                     <div class="mb-3">
@@ -14,6 +15,7 @@
                     <div class="mb-3 font-medium">{{ slotProps.data.price }}</div>
                 </div>
             </template>
+
         </Carousel>
     </div>
 

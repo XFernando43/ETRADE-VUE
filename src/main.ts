@@ -23,6 +23,7 @@ import IconField from 'primevue/iconfield';
 import InputIcon from 'primevue/inputicon';
 import Card from 'primevue/card';
 import Rating from 'primevue/rating';
+import Avatar from 'primevue/avatar';
 
 
 
@@ -42,6 +43,7 @@ app.component('Carousel', Carousel);
 app.component('Tag', Tag);
 app.component('Image', Image);
 app.component('Card', Card);
+app.component('Avatar', Avatar);
 app.component('Rating', Rating);
 
 app.component('Badge', Badge);
