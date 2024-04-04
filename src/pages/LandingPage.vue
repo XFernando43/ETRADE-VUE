@@ -185,7 +185,25 @@
 
     </div>
   </section>
+  
+  <!-- Location -->
+  <section class="">
 
+    <div class="relative">
+      <iframe :src="location" width="100%" height="450" style="border: 0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="p-4 w-30rem border-round-md text-white absolute" style="background-color: #232336; top: 50%; left: 70%;">
+        <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
+        <span>Perú</span>
+      </div>
+    </div>
+    
+  </section>
+
+  <section style="background-color: #232336;">
+    <div>
+
+    </div>
+  </section>
 
 </template>
 
@@ -273,6 +291,7 @@ export default {
           owner: "Laura Martínez",
         },
       ],
+      location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124940.89193798818!2d-77.27027893066405!3d-11.877010300034785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d38d50ee87ad%3A0x13cc324c6c5c4fa7!2sCoolbox!5e0!3m2!1ses-419!2spe!4v1712248292269!5m2!1ses-419!2spe"
     };
   },
 };
