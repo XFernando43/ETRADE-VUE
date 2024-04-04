@@ -3,15 +3,11 @@
     <header class="flex flex-row justify-content-between p-5">
       <p class="font-bold text-white text-4xl"></p>
       <h1 class="font-normal text-white text-4xl Slabo">Etrade</h1>
-      <Button class="font-semibold p-2 justify-content-center text-lg w-6rem"
-        >Call Us</Button
-      >
+      <Button class="font-semibold p-2 justify-content-center text-lg w-6rem">Call Us</Button>
     </header>
 
     <main class="flex flex-column principal-container justify-content-center">
-      <div
-        class="pl-8 flex flex-column text-white gap-4 align-items-start container-width"
-      >
+      <div class="pl-8 flex flex-column text-white gap-4 align-items-start container-width">
         <h1 class="font-ligth text-8xl Slabo title-width">
           Descubre Ofertas Exclusivas Ahora
         </h1>
@@ -19,9 +15,7 @@
           Encuentra las mejores promociones en tecnología y más, solo por tiempo
           limitado.
         </p>
-        <Button class="p-3 justify-content-center font-bold max-w-8rem"
-          >Obtenlo Ya</Button
-        >
+        <Button class="p-3 justify-content-center font-bold max-w-8rem">Obtenlo Ya</Button>
       </div>
     </main>
   </div>
@@ -32,13 +26,8 @@
 
     <div class="carousel-container">
       <div class="carousel">
-        <img
-          v-for="(company, index) in companies"
-          :key="index"
-          :src="company"
-          alt="Company Logo"
-          class="carousel-item img"
-        />
+        <img v-for="(company, index) in companies" :key="index" :src="company" alt="Company Logo"
+          class="carousel-item img" />
       </div>
     </div>
   </section>
@@ -47,25 +36,13 @@
   <section class="flex flex-column gap-2 p-8" style="background-color: #1b1d2c">
     <h3 class="text-white font-bold text-7xl Slabo">Mis Servicios</h3>
     <div class="flex flex-row gap-6">
-      <div
-        v-for="(serviceItem, index) in service"
-        :key="index"
-        class="relative border-round-2xl overflow-hidden service-img-width"
-      >
-        <img
-          preview
-          :src="serviceItem.url"
-          :alt="serviceItem.title"
-          class="block w-full h-full"
-          style="object-fit: cover"
-        />
-        <div
-          class="absolute bottom-0 left-0 p-3 text-white max-w-full h-12rem"
-          style="background-color: rgba(0, 0, 0, 0.9)"
-        >
-          <h3
-            class="Slabo text-white text-4xl font-normal line-height-2 max-w-21rem"
-          >
+      <div v-for="(serviceItem, index) in service" :key="index"
+        class="relative border-round-2xl overflow-hidden service-img-width">
+        <img preview :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full"
+          style="object-fit: cover" />
+        <div class="absolute bottom-0 left-0 p-3 text-white max-w-full h-12rem"
+          style="background-color: rgba(0, 0, 0, 0.9)">
+          <h3 class="Slabo text-white text-4xl font-normal line-height-2 max-w-21rem">
             {{ serviceItem.title }}
           </h3>
           <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
@@ -77,14 +54,11 @@
   <!-- about us -->
   <section class="p-8" style="background-color: #1b1d2c">
     <div class="flex flex-row gap-8 align-items-center justify-content-center">
-      <Image
-        style="max-width: 800px; height: 700px"
-        preview
+      <Image style="max-width: 800px; height: 700px" preview
         class="border-round-xl border-round block w-full h-full overflow-hidden"
         src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
-        alt=""
-      >
-        
+        alt="">
+
       </Image>
 
       <div class="flex flex-column gap-4 text-left" style="max-width: 700px">
@@ -112,38 +86,26 @@
     </h3>
     <div class="flex flex-row justify-content-center gap-3 text-white Slabo">
       <!-- Aca es el v-for -->
-      <div
-        v-for="(priceItem, index) in Prices"
-        :key="index"
+      <div v-for="(priceItem, index) in Prices" :key="index"
         class="flex flex-column gap-2 border-white-alpha-90 border-1 border-round p-3 max-w-25rem price-img-animation"
-        style="background-color: #1b1e2c"
-      >
+        style="background-color: #1b1e2c">
         <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
 
-        <Tag
-          v-if="priceItem.popular === true"
-          class="max-w-5rem h-2rem border-round-xl"
-          severity="info"
-          value="Popular"
-        ></Tag>
+        <Tag v-if="priceItem.popular === true" class="max-w-5rem h-2rem border-round-xl" severity="info"
+          value="Popular"></Tag>
 
         <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
         <div class="flex flex-column" style="line-height: 25px">
           <span class="text-2xl">${{ priceItem.price }}</span>
           <span>Por venta</span>
         </div>
-        <Button class="justify-content-center p-2 Roboto" severity="info"
-          >Mas Informacion</Button
-        >
+        <Button class="justify-content-center p-2 Roboto" severity="info">Mas Informacion</Button>
 
         <p class="Roboto text-lg">{{ priceItem.description }}</p>
 
         <ul class="list-none">
-          <li
-            v-for="(descriptionItem, index) in priceItem.functionalities"
-            :key="index"
-            class="flex flex-row gap-3 align-items-center"
-          >
+          <li v-for="(descriptionItem, index) in priceItem.functionalities" :key="index"
+            class="flex flex-row gap-3 align-items-center">
             <i class="pi pi-check"></i>
             {{ descriptionItem }}
           </li>
@@ -152,21 +114,75 @@
     </div>
 
   </section>
-  
+
   <!-- Testimonials -->
   <section class="p-8 flex flex-column justify-content-center align-items-center" style="background-color: #1b1e2c;">
 
-    <Carousel :showIndicators="false" :value="testimonials" :num-visible="1" :num-scroll="1" circular :autoplayInterval="4000" style="max-width: 1440px;">
-      <template #item="slotProps" >
-       
+    <Carousel :showIndicators="false" :value="testimonials" :num-visible="1" :num-scroll="1" circular
+      :autoplayInterval="4000" style="max-width: 1440px;">
+      <template #item="slotProps">
+
         <div class="flex flex-column gap-3 justify-content-center text-white p-4">
-          <img :src="slotProps.data.img" alt="person" class="w-5rem h-5rem " style="border-radius: 50%; object-fit: cover;" >
+          <img :src="slotProps.data.img" alt="person" class="w-5rem h-5rem "
+            style="border-radius: 50%; object-fit: cover;">
           <p class="Slabo text-4xl w-full">{{ slotProps.data.texto }}</p>
           <label class="Barlow">- {{ slotProps.data.owner }}</label>
         </div>
       </template>
     </Carousel>
-        
+
+  </section>
+
+  <!-- get in contact -->
+
+  <section class="p-7 " style="background-color: #1e1e2c;">
+
+    <div class="flex flex-row justify-content-center gap-4 text-white" style="width: 1440px;">
+      
+
+      <div class="flex flex-column gap-4 justify-content-center p-4">
+        <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
+        <p class="Robot text-lg">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
+      </div>
+
+      <form class="flex flex-column gap-4 p-4">
+
+        <head class="flex flex-row gap-2">
+
+          <div class="flex flex-column gap-2">
+            <div class="flex flex-column gap-2">
+              <label for="Nombre">Nombre</label>
+              <InputText id="Nombre" />
+            </div>
+          </div>
+
+          <div class="flex flex-column gap-2">
+            <div class="flex flex-column gap-2">
+              <label for="correo">Correo Electronico</label>
+              <InputText id="correo" />
+            </div>
+          </div>
+          
+        </head>
+
+
+        <body>
+
+          <div class="flex flex-column gap-2">
+            <div class="flex flex-column gap-2">
+              <label for="mensaje">Mensaje</label>
+              <Textarea rows="7" cols="30" />
+            </div>
+          </div>
+
+        </body>
+       
+       
+      </form>
+
+
+    </div>
+
   </section>
 
 </template>
@@ -240,18 +256,18 @@ export default {
       ],
       testimonials: [
         {
-          img: "https://pymstatic.com/5844/conversions/personas-emocionales-wide_webp.webp", 
-          texto:"!Kombox es increíble, Su equipo de ventas es muy profesional y eficiente. Quedé completamente impresionada,con su atención al cliente y su calidad de servicio, mis ventas aumentaron increíblemente",
-          owner: "María García", 
+          img: "https://pymstatic.com/5844/conversions/personas-emocionales-wide_webp.webp",
+          texto: "!Kombox es increíble, Su equipo de ventas es muy profesional y eficiente. Quedé completamente impresionada,con su atención al cliente y su calidad de servicio, mis ventas aumentaron increíblemente",
+          owner: "María García",
         },
         {
-          img: "https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/ffe2063e-e2b0-473b-9637-31bdf07fd762/Hero_Desk_Banco-para-los-jovenes+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P864E0Q30449MS3000-ffe2063e-e2b0-473b-9637-31bdf07fd762-ogl8w-c", 
-          texto:"¡Excelente servicio! Kombox superó todas mis expectativas. Definitivamente los recomendaré a todos mis colegas.",
+          img: "https://www.bancolombia.com/wcm/connect/www.bancolombia.com-26918/ffe2063e-e2b0-473b-9637-31bdf07fd762/Hero_Desk_Banco-para-los-jovenes+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE.Z18_K9HC1202P864E0Q30449MS3000-ffe2063e-e2b0-473b-9637-31bdf07fd762-ogl8w-c",
+          texto: "¡Excelente servicio! Kombox superó todas mis expectativas. Definitivamente los recomendaré a todos mis colegas.",
           owner: "Juan Pérez",
         },
         {
-          img: "https://img.freepik.com/foto-gratis/confianza-alegre-joven-empresaria_1262-20881.jpg?w=740", 
-          texto:"Kombox ha sido fundamental para el crecimiento de mi negocio. Su plataforma es fácil de usar y su equipo de soporte es excepcional.",
+          img: "https://img.freepik.com/foto-gratis/confianza-alegre-joven-empresaria_1262-20881.jpg?w=740",
+          texto: "Kombox ha sido fundamental para el crecimiento de mi negocio. Su plataforma es fácil de usar y su equipo de soporte es excepcional.",
           owner: "Laura Martínez",
         },
       ],

@@ -24,7 +24,7 @@ import InputIcon from 'primevue/inputicon';
 import Card from 'primevue/card';
 import Rating from 'primevue/rating';
 import Avatar from 'primevue/avatar';
-
+import Textarea from 'primevue/textarea';
 
 
 
@@ -45,6 +45,7 @@ app.component('Image', Image);
 app.component('Card', Card);
 app.component('Avatar', Avatar);
 app.component('Rating', Rating);
+app.component('Textarea', Textarea);
 
 app.component('Badge', Badge);
 app.directive('badge', BadgeDirective);
