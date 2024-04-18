@@ -1,5 +1,6 @@
 <template>
-    <header class="p-3 flex justify-content-center ">
+    <!-- <header class="p-3 flex justify-content-center "> -->
+    <header class="">
         <div class="flex flex-row gap-3">
             <div>
                 <button class="flex cursor-pointer m-0 border-none bg-transparent align-items-center" @click="search">
