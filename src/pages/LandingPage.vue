@@ -3,7 +3,7 @@
     <header class="flex flex-row justify-content-between p-5">
       <p class="font-bold text-white text-4xl"></p>
       <h1 class="font-normal text-white text-4xl Slabo">Etrade</h1>
-      <Button class="font-semibold p-2 justify-content-center text-lg w-6rem">Call Us</Button>
+      <Button class="font-semibold justify-content-center text-lg w-6rem h-3rem">Call Us</Button>
     </header>
 
     <main class="flex flex-column principal-container justify-content-center">

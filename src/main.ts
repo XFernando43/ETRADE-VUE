@@ -8,10 +8,6 @@ import 'primevue/resources/primevue.min.css'
 import 'primevue/resources/themes/aura-light-green/theme.css'
 import 'primeicons/primeicons.css'
 
-// import 'primeflex/primeflex.css';
-
-
-
 //components
 import Button from 'primevue/button';
 import Dropdown from 'primevue/dropdown';
