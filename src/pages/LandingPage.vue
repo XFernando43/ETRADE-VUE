@@ -54,16 +54,16 @@
 
   <!-- Sobre nosotros -->
 
-  <section class="p-8 align-items-center" style="background-color: #1b1d2c">
+  <section class="p-8 align-items-center text-white" style="background-color: #1b1d2c">
 
-    <div class="flex sm:flex-col gap-8 align-items-center">
-      <h3 class="text-white font-normal Slabo sm:text-3xl">Sobre Nosotros</h3>
-      <p class="text-white Robot">
+    <div class="flex sm:flex-col sm:gap-8 md:gap-6 align-items-center">
+      <h3 class="font-normal Slabo sm:text-3xl md:text-5xl">Sobre Nosotros</h3>
+      <p class="Roboto sm:text-sm md:text-xl md:font-light">
         Somos Kombox, una empresa de ventas ubicada en Perú. Nos
         especializamos en ofrecer soluciones efectivas para impulsar el
         crecimiento de su negocio.
       </p>
-      <p class="text-white Robot">
+      <p class="Roboto sm:text-sm md:text-xl md:font-light">
         Nuestro equipo está comprometido en brindar un servicio excepcional y
         resultados sobresalientes para nuestros clientes. Confíe en nosotros
         para llevar su estrategia de ventas al siguiente nivel.
@@ -71,22 +71,20 @@
       <Image preview
         src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
         alt=""></Image>
-      <button class="bg-green-500 rounded-md p-2 text-black font-bold text-center">Learn More</button>
+      <button class="bg-green-500 rounded-md p-2 text-black font-semibold text-center sm:w-full md:max-w-36">Learn More</button>
     </div>
   </section>
 
   <!-- Tabla de precios   -->
 
-  <section class="pt-5 pb-8 gap-4" style="background-color: #1b1e2c;">
-    <div class="flex flex-col gap-3 p-3 text-white">
+  <section class="pt-5 pb-8" style="background-color: #1b1e2c;">
+    <div class="flex flex-col gap-3 p-5 text-white">
       <h3 class="font-medium text-3xl Slabo text-center pb-3">Tabla de Precios</h3>
-      <div class="flex flex-col justify-content-center gap-3 Slabo ">
-        <div v-for="(priceItem, index) in Prices" :key="index"
-          class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 lg:price-img-animation"
-          style="background-color: #1b1e2c;">
-          <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
+      <div class="flex sm:flex-col md:flex-row justify-content-center gap-3 Slabo ">
 
-          <Tag v-if="priceItem.popular === true" class="w-auto border-round-xl" severity="info" value="Popular"></Tag>
+        <div v-for="(priceItem, index) in Prices" :key="index" 
+            class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 price-img-animation">
+          <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
 
           <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
           <div class="flex flex-row items-center gap-3" style="line-height: 25px">
@@ -104,7 +102,9 @@
               {{ descriptionItem }}
             </li>
           </ul>
+          <Tag v-if="priceItem.popular === true" class="w-auto border-round-xl font-semibold" severity="info" value="Popular"></Tag>
         </div>
+        
       </div>
     </div>
   </section>
@@ -118,7 +118,7 @@
 
         <div class="flex flex-col gap-12 justify-content-center text-white p-4">
           <img :src="slotProps.data.img" alt="person" class="sm:max-w-32 sm:max-h-40 rounded-2xl">
-          <p class="Slabo text-4xl">{{ slotProps.data.texto }}</p>
+          <p class="Slabo sm:text-xl md:text-3xl lg:text-4xl">{{ slotProps.data.texto }}</p>
           <label class="Barlow">- {{ slotProps.data.owner }}</label>
         </div>
       </template>
@@ -126,9 +126,10 @@
 
   </section>
 
+  <!-- Contact -->
 
-  <section class="p-7 flex flex-col justify-content-center align-items-center" style="background-color: #232336;">
-    <div class="flex flex-col justify-content-center gap-4 text-white">
+  <section class="p-7" style="background-color: #232336;">
+    <div class="flex sm:flex-col md:flex-col lg:flex-row justify-content-center gap-4 text-white">
 
       <div class="flex flex-col gap-4 justify-content-center p-4">
         <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
@@ -137,17 +138,17 @@
 
       <form class="flex flex-col gap-3 p-4">
 
-        <head class="flex flex-col gap-2">
+        <head class="flex sm:flex-col md:flex-col lg:flex-row gap-2">
           <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-2">
               <label for="Nombre">Nombre</label>
-              <InputText id="Nombre" class=" p-1 text-white bg-transparent	" />
+              <InputText id="Nombre" class=" p-1 bg-transparent" />
             </div>
           </div>
           <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-2">
               <label for="correo">Correo Electronico</label>
-              <InputText id="correo" class=" p-1 text-white bg-transparent" />
+              <InputText id="correo" class="p-1 bg-transparent" />
             </div>
           </div>
         </head>
@@ -165,13 +166,15 @@
           <p class="hidden max-w-20rem text-xs lg:block">Este sitio está protegido por reCAPTCHA y Google política de
             privacidad y
             Términos de servicio aplicar.</p>
-          <button class=" bg-green-500 text-center font-semibold p-2 rounded-md w-full">Enviar</button>
+          <button class=" bg-green-500 text-center font-semibold p-2 rounded-md sm:w-full md:max-w-36">Enviar</button>
         </div>
 
       </form>
 
     </div>
   </section>
+
+  <!-- location -->
 
   <section>
     <div class="relative">
@@ -184,6 +187,8 @@
       </div>
     </div>
   </section>
+
+  <!-- Footer -->
 
   <section class="p-8 text-white align-items-center" style="background-color: #232336;">
     <div class="flex flex-col gap-6 text-center">
