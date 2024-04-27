@@ -1,113 +1,95 @@
 <template>
-  <div class="img-transparent">
-    <header class="flex flex-row justify-content-between p-5">
-      <p class="font-bold text-white text-4xl"></p>
-      <h1 class="font-normal text-white text-4xl Slabo">Etrade</h1>
-      <Button class="font-semibold justify-content-center text-lg w-6rem h-3rem">Call Us</Button>
+
+  <div class="img-transparent text-white">
+    <header class="p-4 flex flex-row items-center sm:justify-between ">
+      <i></i>
+      <h2 class="Slabo font-normal text-2xl">ETrade</h2>
+      <i class="pi pi-align-justify"></i>
     </header>
 
-    <main class="flex flex-column principal-container justify-content-center">
-      <div class="pl-8 flex flex-column text-white gap-4 align-items-start container-width">
-        <h1 class="font-ligth text-8xl Slabo title-width">
-          Descubre Ofertas Exclusivas Ahora
-        </h1>
-        <p class="Roboto font-normal text-xl paragraph-width">
-          Encuentra las mejores promociones en tecnología y más, solo por tiempo
-          limitado.
-        </p>
-        <Button class="p-3 justify-content-center font-bold max-w-8rem">Obtenlo Ya</Button>
-      </div>
+    <main class="flex flex-col gap-4 p-5">
+      <h1 class="Slabo text-4xl font-semibold ">Descubre Ofertas Exclusivas Ahora</h1>
+      <p class=" text-lg"> Encuentra las mejores promociones en tecnología y más,
+        solo por tiempo limitado.</p>
+      <button class=" bg-green-500 text-center rounded-md p-2 text-black font-bold">Comprar Ya</button>
     </main>
   </div>
 
-  <!-- Clients -->
-  <section class="flex flex-column gap-4 p-8" style="background-color: #12141d">
-    <h2 class="text-white font-bold text-6xl Slabo">Nuestros Clientes</h2>
-
+  <!-- clientes -->
+  <section class="flex flex-col gap-4 p-8" style="background-color: #12141d">
+    <h2 class="text-white font-semibold sm:text-3xl Slabo">Nuestros Clientes</h2>
     <div class="carousel-container">
       <div class="carousel">
         <img v-for="(company, index) in companies" :key="index" :src="company" alt="Company Logo"
-          class="carousel-item img" />
+          class="carousel-item img sm:max-h-7" />
       </div>
     </div>
   </section>
 
-  <!-- Seccion de servicios -->
-  <section class="flex flex-column align-items-center gap-2 p-5" style="background-color: #1b1d2c">
+  <!-- Services -->
 
+  <section class="flex flex-col align-items-center gap-2 p-5" style="background-color: #1b1d2c">
     <div class="p-3 text-white">
-
-      <h3 class=" font-normal text-7xl Slabo">Mis Servicios</h3>
-      <div class="flex flex-row gap-6">
-        <div v-for="(serviceItem, index) in service" :key="index"
-          class="relative border-round-2xl overflow-hidden service-img-width">
+      <h3 class="text-3xl Slabo">Mis Servicios</h3>
+      <div class="flex sm:flex-col gap-6">
+        <div v-for="(serviceItem, index) in service" :key="index" class="relative border-round-2xl overflow-hidden">
           <img preview :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full"
             style="object-fit: cover" />
-          <div class="absolute bottom-0 left-0 p-3 max-w-full h-12rem" style="background-color: rgba(0, 0, 0, 0.9)">
-            <h3 class="Slabo text-4xl font-normal line-height-2 max-w-21rem">
+
+          <div class="absolute bottom-0 left-0 p-3 " style="background-color: rgba(0, 0, 0, 0.9)">
+            <h3 class="Slabo sm:text-lg ">
               {{ serviceItem.title }}
             </h3>
-            <p class="pt-3 pb-3">{{ serviceItem.description }}</p>
+            <p class="pt-3 pb-3 sm:text-xs">{{ serviceItem.description }}</p>
           </div>
         </div>
       </div>
-
     </div>
-
   </section>
 
 
-  <!-- about us -->
-  <section class="p-8 flex flex-column align-items-center" style="background-color: #1b1d2c">
-    <div class="flex flex-row gap-8 align-items-center">
-      <Image style="max-width: 780px; height: 450px" preview
-        class="border-round-xl border-round block w-full h-full overflow-hidden"
+  <!-- Sobre nosotros -->
+
+  <section class="p-8 align-items-center" style="background-color: #1b1d2c">
+
+    <div class="flex sm:flex-col gap-8 align-items-center">
+      <h3 class="text-white font-normal Slabo sm:text-3xl">Sobre Nosotros</h3>
+      <p class="text-white Robot">
+        Somos Kombox, una empresa de ventas ubicada en Perú. Nos
+        especializamos en ofrecer soluciones efectivas para impulsar el
+        crecimiento de su negocio.
+      </p>
+      <p class="text-white Robot">
+        Nuestro equipo está comprometido en brindar un servicio excepcional y
+        resultados sobresalientes para nuestros clientes. Confíe en nosotros
+        para llevar su estrategia de ventas al siguiente nivel.
+      </p>
+      <Image preview
         src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
-        alt="">
-
-      </Image>
-
-      <div class="flex flex-column gap-4 text-left" style="max-width: 700px">
-        <h3 class="text-white font-normal Slabo text-7xl">Sobre Nosotros</h3>
-        <p class="text-white Robot">
-          Somos Kombox, una empresa de ventas ubicada en Perú. Nos
-          especializamos en ofrecer soluciones efectivas para impulsar el
-          crecimiento de su negocio.
-        </p>
-        <p class="text-white Robot">
-          Nuestro equipo está comprometido en brindar un servicio excepcional y
-          resultados sobresalientes para nuestros clientes. Confíe en nosotros
-          para llevar su estrategia de ventas al siguiente nivel.
-        </p>
-        <Button class="p-3 max-w-8rem"> Learn More </Button>
-      </div>
+        alt=""></Image>
+      <button class="bg-green-500 rounded-md p-2 text-black font-bold text-center">Learn More</button>
     </div>
   </section>
 
-
-  <!-- Precios -->
+  <!-- Tabla de precios (Revisar algunos detalles) -->
 
   <section class="pt-5 pb-8 gap-4" style="background-color: #1b1e2c;">
-
-    <div class="flex flex-column gap-3 p-3 text-white">
-
-      <h3 class="font-bold text-7xl Slabo text-center">Tabla de Precios</h3>
-      <div class="flex flex-row justify-content-center gap-3 text-white Slabo">
-        <!-- Aca es el v-for -->
+    <div class="flex flex-col gap-3 p-3 text-white">
+      <h3 class="font-medium text-3xl Slabo text-center pb-3">Tabla de Precios</h3>
+      <div class="flex flex-col justify-content-center gap-3 Slabo ">
         <div v-for="(priceItem, index) in Prices" :key="index"
-          class="flex flex-column gap-2 border-white-alpha-90 border-1 border-round p-3 price-img-animation"
-          style="background-color: #1b1e2c; width: 450px; max-height: 680px;">
+          class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 lg:price-img-animation"
+          style="background-color: #1b1e2c;">
           <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
 
-          <Tag v-if="priceItem.popular === true" class="max-w-5rem h-2rem border-round-xl" severity="info"
-            value="Popular"></Tag>
+          <Tag v-if="priceItem.popular === true" class="w-auto border-round-xl" severity="info" value="Popular"></Tag>
 
           <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
-          <div class="flex flex-column" style="line-height: 25px">
+          <div class="flex flex-row items-center gap-3" style="line-height: 25px">
             <span class="text-2xl">${{ priceItem.price }}</span>
             <span>Por venta</span>
           </div>
-          <Button class="justify-content-center p-2 Roboto" severity="info">Mas Informacion</Button>
+          <button class="bg-green-500 rounded-lg p-2 Roboto">Mas Informacion</button>
 
           <p class="Roboto text-lg">{{ priceItem.description }}</p>
 
@@ -120,21 +102,18 @@
           </ul>
         </div>
       </div>
-
     </div>
-
   </section>
 
   <!-- Testimonials -->
-  <section class="p-8 flex flex-column justify-content-center align-items-center" style="background-color: #1b1e2c;">
 
+  <section class="p-8 flex flex-col justify-content-center align-items-center" style="background-color: #1b1e2c;">
     <Carousel :showIndicators="false" :value="testimonials" :num-visible="1" :num-scroll="1" circular
-      :autoplayInterval="4000" style="max-width: 1440px;">
+      :autoplayInterval="4000">
       <template #item="slotProps">
 
-        <div class="flex flex-column gap-3 justify-content-center text-white p-4">
-          <img :src="slotProps.data.img" alt="person" class="w-5rem h-5rem "
-            style="border-radius: 50%; object-fit: cover;">
+        <div class="flex flex-col gap-12 justify-content-center text-white p-4">
+          <img :src="slotProps.data.img" alt="person" class="sm:max-w-32 sm:max-h-40 rounded-2xl">
           <p class="Slabo text-4xl w-full">{{ slotProps.data.texto }}</p>
           <label class="Barlow">- {{ slotProps.data.owner }}</label>
         </div>
@@ -143,70 +122,124 @@
 
   </section>
 
-  <!-- get in contact -->
-  <section class="p-7 flex flex-column justify-content-center align-items-center" style="background-color: #232336;">
-    <div class="flex flex-row justify-content-center gap-4 text-white " style="width: 1440px;">
-      
-      <div class="flex flex-column gap-4 justify-content-center p-4">
+
+  <!-- FORMS terminar -->
+
+  <section class="p-7 flex flex-col justify-content-center align-items-center" style="background-color: #232336;">
+    <div class="flex flex-col justify-content-center gap-4 text-white">
+
+      <div class="flex flex-col gap-4 justify-content-center p-4">
         <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
-        <p class="Robot text-lg">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
+        <p class="Roboto ">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
       </div>
 
-      <form class="flex flex-column gap-3 p-4">
-        <head class="flex flex-row gap-2">
-          <div class="flex flex-column gap-2">
-            <div class="flex flex-column gap-2">
+      <form class="flex flex-col gap-3 p-4">
+
+        <head class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
               <label for="Nombre">Nombre</label>
-              <InputText id="Nombre" class=" p-1 w-full text-white" style="background-color: transparent;" />
+              <InputText id="Nombre" class=" p-1 text-white bg-transparent	" />
             </div>
           </div>
-          <div class="flex flex-column gap-2">
-            <div class="flex flex-column gap-2">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
               <label for="correo">Correo Electronico</label>
-              <InputText id="correo" class=" p-1 w-full text-white" style="background-color: transparent;"/>
+              <InputText id="correo" class=" p-1 text-white bg-transparent" />
             </div>
           </div>
         </head>
+
         <body>
-          <div class="flex flex-column gap-2">
-            <div class="flex flex-column gap-2">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2">
               <label for="mensaje">Mensaje</label>
-              <Textarea rows="7" cols="10" class="w-full p-1 text-white" style="background-color: transparent;"/>
+              <Textarea rows="7" cols="10" class="p-1 text-white bg-transparent	"  />
             </div>
           </div>
         </body>
 
         <div class="flex flex-row justify-content-between gap-2">
-          <p class="max-w-20rem text-xs">Este sitio está protegido por reCAPTCHA y Google política de privacidad y Términos de servicio aplicar.</p>
-          <Button class="justify-content-center font-normal p-2 w-5rem">Enviar</Button>
+          <p class="hidden max-w-20rem text-xs lg:block">Este sitio está protegido por reCAPTCHA y Google política de privacidad y
+            Términos de servicio aplicar.</p>
+          <button class=" bg-green-500 text-center font-semibold p-2 rounded-md w-full">Enviar</button>
         </div>
-
+        
       </form>
 
     </div>
   </section>
-  
-  <!-- Location -->
-  <section class="m-0">
 
-    <div class="relative">
-      <iframe :src="location" width="100%" height="700" style="border: 0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="p-4 w-29rem h-auto border-round-md text-white absolute" style="background-color: #232336; top: 20%; left: 70%;">
-        <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
-        <span>Perú</span>
+  <!-- 
+
+<section class="p-7 flex flex-column justify-content-center align-items-center" style="background-color: #232336;">
+  <div class="flex flex-row justify-content-center gap-4 text-white " style="width: 1440px;">
+
+    <div class="flex flex-column gap-4 justify-content-center p-4">
+      <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
+      <p class="Robot text-lg">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
+    </div>
+
+    <form class="flex flex-column gap-3 p-4">
+
+      <head class="flex flex-row gap-2">
+        <div class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2">
+            <label for="Nombre">Nombre</label>
+            <InputText id="Nombre" class=" p-1 w-full text-white" style="background-color: transparent;" />
+          </div>
+        </div>
+        <div class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2">
+            <label for="correo">Correo Electronico</label>
+            <InputText id="correo" class=" p-1 w-full text-white" style="background-color: transparent;" />
+          </div>
+        </div>
+      </head>
+
+      <body>
+        <div class="flex flex-column gap-2">
+          <div class="flex flex-column gap-2">
+            <label for="mensaje">Mensaje</label>
+            <Textarea rows="7" cols="10" class="w-full p-1 text-white" style="background-color: transparent;" />
+          </div>
+        </div>
+      </body>
+
+      <div class="flex flex-row justify-content-between gap-2">
+        <p class="max-w-20rem text-xs">Este sitio está protegido por reCAPTCHA y Google política de privacidad y
+          Términos de servicio aplicar.</p>
+        <Button class="justify-content-center font-normal p-2 w-5rem">Enviar</Button>
       </div>
-    </div>
-    
-  </section>
 
-  <section class="p-8 text-white align-items-center" style="background-color: #232336;">
-    <div class="flex flex-column gap-6 text-center">
-      <h1 class="text-4xl Slabo font-semibold">Kombox</h1>
-      <p class="Roboto font-normal text-xl">Made it with VueJS</p>
-    </div>
-  </section>
+    </form>
 
-  
+  </div>
+</section>
+
+
+<section class="m-0">
+
+  <div class="relative">
+    <iframe :src="location" width="100%" height="700" style="border: 0;" allowfullscreen="true" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="p-4 w-29rem h-auto border-round-md text-white absolute"
+      style="background-color: #232336; top: 20%; left: 70%;">
+      <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
+      <span>Perú</span>
+    </div>
+  </div>
+
+</section>
+
+<section class="p-8 text-white align-items-center" style="background-color: #232336;">
+  <div class="flex flex-column gap-6 text-center">
+    <h1 class="text-4xl Slabo font-semibold">Kombox</h1>
+    <p class="Roboto font-normal text-xl">Made it with VueJS</p>
+  </div>
+</section>
+
+-->
 
 </template>
 
@@ -294,14 +327,13 @@ export default {
           owner: "Laura Martínez",
         },
       ],
-      location:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124940.89193798818!2d-77.27027893066405!3d-11.877010300034785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d38d50ee87ad%3A0x13cc324c6c5c4fa7!2sCoolbox!5e0!3m2!1ses-419!2spe!4v1712248292269!5m2!1ses-419!2spe"
+      location: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124940.89193798818!2d-77.27027893066405!3d-11.877010300034785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d38d50ee87ad%3A0x13cc324c6c5c4fa7!2sCoolbox!5e0!3m2!1ses-419!2spe!4v1712248292269!5m2!1ses-419!2spe"
     };
   },
 };
 </script>
 
 <style scoped>
-
 .price-img-animation:hover {
   transform: scale(1.15);
   transition: transform 0.5s ease;
@@ -313,12 +345,6 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 53rem;
-}
-
-.service-img-width {
-  width: 490px;
-  height: 720px;
 
 }
 
@@ -343,7 +369,7 @@ export default {
   opacity: 0.5;
   filter: contrast(0%) brightness(200%);
   height: auto;
-  max-height: 48px;
+  /* max-height: 28px; */
   margin: 16px 24px;
 }
 

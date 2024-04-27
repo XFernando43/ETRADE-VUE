@@ -1,6 +1,6 @@
 <template>
     <!-- <header class="p-3 flex justify-content-center "> -->
-    <header class="">
+    <!-- <header class="">
         <div class="flex flex-row gap-3">
             <div>
                 <button class="flex cursor-pointer m-0 border-none bg-transparent align-items-center" @click="search">
@@ -22,7 +22,11 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
+
+    <!-- <Button>PIPI</Button> -->
+    <Tag>PIPI</Tag>
+
 </template>
 
 <script lang="ts">
