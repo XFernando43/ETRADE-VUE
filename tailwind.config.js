@@ -8,11 +8,11 @@ export default {
     screens: {
       'sm': '100px',
       // => @media (min-width: 576px) { ... }
-
-      'md': '960px',
+      'md': '760px',
       // => @media (min-width: 960px) { ... }
-
-      'lg': '1440px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
       // => @media (min-width: 1440px) { ... }
     },
   },

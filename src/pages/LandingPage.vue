@@ -1,17 +1,19 @@
 <template>
 
   <div class="img-transparent text-white">
-    <header class="p-4 flex flex-row items-center sm:justify-between ">
+    <header class="p-4 flex flex-row items-center sm:justify-between">
       <i></i>
-      <h2 class="Slabo font-normal text-2xl">ETrade</h2>
+      <h2 class="Slabo font-normal text-2xl md:text-center">ETrade</h2>
       <i class="pi pi-align-justify"></i>
     </header>
 
-    <main class="flex flex-col gap-4 p-5">
-      <h1 class="Slabo text-4xl font-semibold ">Descubre Ofertas Exclusivas Ahora</h1>
-      <p class=" text-lg"> Encuentra las mejores promociones en tecnología y más,
-        solo por tiempo limitado.</p>
-      <button class=" bg-green-500 text-center rounded-md p-2 text-black font-bold">Comprar Ya</button>
+    <main class="flex flex-col gap-4 sm:p-5 md:text-center">
+      <div class="flex flex-col gap-4 text-start p-4 mx-auto sm:h-auto md:h-96 md:justify-center">
+        <h1 class="Slabo sm:text-4xl md:text-6xl font-medium">Descubre Ofertas Exclusivas Ahora</h1>
+        <p class="text-lg md:pb-10">Encuentra las mejores promociones en tecnología y más, solo por tiempo limitado.</p>
+        <button class="bg-green-500 text-center rounded-md p-2 text-black font-semibold sm:w-full md:max-w-36">Comprar
+          Ya</button>
+      </div>
     </main>
   </div>
 
@@ -21,31 +23,33 @@
     <div class="carousel-container">
       <div class="carousel">
         <img v-for="(company, index) in companies" :key="index" :src="company" alt="Company Logo"
-          class="carousel-item img sm:max-h-7" />
+          class="carousel-item img sm:max-h-7 md:max-h-14" />
       </div>
     </div>
   </section>
 
   <!-- Services -->
 
-  <section class="flex flex-col align-items-center gap-2 p-5" style="background-color: #1b1d2c">
-    <div class="p-3 text-white">
-      <h3 class="text-3xl Slabo">Mis Servicios</h3>
-      <div class="flex sm:flex-col gap-6">
+  <section class="p-5" style="background-color: #1b1d2c">
+    <div class="flex flex-col gap-5 p-3 text-white">
+      <h3 class="sm:text-3xl Slabo md:text-5xl">Mis Servicios</h3>
+      <div class="sm:flex sm:flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row  gap-6">
+        
         <div v-for="(serviceItem, index) in service" :key="index" class="relative border-round-2xl overflow-hidden">
-          <img preview :src="serviceItem.url" :alt="serviceItem.title" class="block w-full h-full"
-            style="object-fit: cover" />
+          <img preview :src="serviceItem.url" :alt="serviceItem.title" class="" style="object-fit: cover" />
 
-          <div class="absolute bottom-0 left-0 p-3 " style="background-color: rgba(0, 0, 0, 0.9)">
+          <div class="absolute bottom-0 left-0 right-0 p-3" style="background-color: rgba(0, 0, 0, 0.9)">
             <h3 class="Slabo sm:text-lg ">
               {{ serviceItem.title }}
             </h3>
-            <p class="pt-3 pb-3 sm:text-xs">{{ serviceItem.description }}</p>
+            <p class="pt-3 pb-3 sm:text-xs md:text-base">{{ serviceItem.description }}</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
 
 
   <!-- Sobre nosotros -->
@@ -71,7 +75,7 @@
     </div>
   </section>
 
-  <!-- Tabla de precios (Revisar algunos detalles) -->
+  <!-- Tabla de precios   -->
 
   <section class="pt-5 pb-8 gap-4" style="background-color: #1b1e2c;">
     <div class="flex flex-col gap-3 p-3 text-white">
@@ -107,14 +111,14 @@
 
   <!-- Testimonials -->
 
-  <section class="p-8 flex flex-col justify-content-center align-items-center" style="background-color: #1b1e2c;">
+  <section class="p-8 flex flex-col" style="background-color: #1b1e2c;">
     <Carousel :showIndicators="false" :value="testimonials" :num-visible="1" :num-scroll="1" circular
       :autoplayInterval="4000">
       <template #item="slotProps">
 
         <div class="flex flex-col gap-12 justify-content-center text-white p-4">
           <img :src="slotProps.data.img" alt="person" class="sm:max-w-32 sm:max-h-40 rounded-2xl">
-          <p class="Slabo text-4xl w-full">{{ slotProps.data.texto }}</p>
+          <p class="Slabo text-4xl">{{ slotProps.data.texto }}</p>
           <label class="Barlow">- {{ slotProps.data.owner }}</label>
         </div>
       </template>
@@ -122,8 +126,6 @@
 
   </section>
 
-
-  <!-- FORMS terminar -->
 
   <section class="p-7 flex flex-col justify-content-center align-items-center" style="background-color: #232336;">
     <div class="flex flex-col justify-content-center gap-4 text-white">
