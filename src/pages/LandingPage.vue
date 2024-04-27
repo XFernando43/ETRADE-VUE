@@ -154,92 +154,41 @@
           <div class="flex flex-col gap-2">
             <div class="flex flex-col gap-2">
               <label for="mensaje">Mensaje</label>
-              <Textarea rows="7" cols="10" class="p-1 text-white bg-transparent	"  />
+              <Textarea rows="7" cols="10" class="p-1 text-white bg-transparent	" />
             </div>
           </div>
         </body>
 
         <div class="flex flex-row justify-content-between gap-2">
-          <p class="hidden max-w-20rem text-xs lg:block">Este sitio está protegido por reCAPTCHA y Google política de privacidad y
+          <p class="hidden max-w-20rem text-xs lg:block">Este sitio está protegido por reCAPTCHA y Google política de
+            privacidad y
             Términos de servicio aplicar.</p>
           <button class=" bg-green-500 text-center font-semibold p-2 rounded-md w-full">Enviar</button>
         </div>
-        
+
       </form>
 
     </div>
   </section>
 
-  <!-- 
-
-<section class="p-7 flex flex-column justify-content-center align-items-center" style="background-color: #232336;">
-  <div class="flex flex-row justify-content-center gap-4 text-white " style="width: 1440px;">
-
-    <div class="flex flex-column gap-4 justify-content-center p-4">
-      <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
-      <p class="Robot text-lg">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
-    </div>
-
-    <form class="flex flex-column gap-3 p-4">
-
-      <head class="flex flex-row gap-2">
-        <div class="flex flex-column gap-2">
-          <div class="flex flex-column gap-2">
-            <label for="Nombre">Nombre</label>
-            <InputText id="Nombre" class=" p-1 w-full text-white" style="background-color: transparent;" />
-          </div>
-        </div>
-        <div class="flex flex-column gap-2">
-          <div class="flex flex-column gap-2">
-            <label for="correo">Correo Electronico</label>
-            <InputText id="correo" class=" p-1 w-full text-white" style="background-color: transparent;" />
-          </div>
-        </div>
-      </head>
-
-      <body>
-        <div class="flex flex-column gap-2">
-          <div class="flex flex-column gap-2">
-            <label for="mensaje">Mensaje</label>
-            <Textarea rows="7" cols="10" class="w-full p-1 text-white" style="background-color: transparent;" />
-          </div>
-        </div>
-      </body>
-
-      <div class="flex flex-row justify-content-between gap-2">
-        <p class="max-w-20rem text-xs">Este sitio está protegido por reCAPTCHA y Google política de privacidad y
-          Términos de servicio aplicar.</p>
-        <Button class="justify-content-center font-normal p-2 w-5rem">Enviar</Button>
+  <section>
+    <div class="relative">
+      <iframe :src="location" width="100%" height="400" style="border: 0;" allowfullscreen="true" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="p-4 rounded-md text-white absolute sm:w-10/12 "
+        style="background-color: #232336; top: 20%; left: 8%;">
+        <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
+        <span class="Roboto text-sm">Perú</span>
       </div>
-
-    </form>
-
-  </div>
-</section>
-
-
-<section class="m-0">
-
-  <div class="relative">
-    <iframe :src="location" width="100%" height="700" style="border: 0;" allowfullscreen="true" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div class="p-4 w-29rem h-auto border-round-md text-white absolute"
-      style="background-color: #232336; top: 20%; left: 70%;">
-      <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
-      <span>Perú</span>
     </div>
-  </div>
+  </section>
 
-</section>
-
-<section class="p-8 text-white align-items-center" style="background-color: #232336;">
-  <div class="flex flex-column gap-6 text-center">
-    <h1 class="text-4xl Slabo font-semibold">Kombox</h1>
-    <p class="Roboto font-normal text-xl">Made it with VueJS</p>
-  </div>
-</section>
-
--->
+  <section class="p-8 text-white align-items-center" style="background-color: #232336;">
+    <div class="flex flex-col gap-6 text-center">
+      <h1 class="text-4xl Slabo font-semibold">Kombox</h1>
+      <p class="Roboto font-normal text-xl">Made it with VueJS</p>
+    </div>
+  </section>
 
 </template>
 
