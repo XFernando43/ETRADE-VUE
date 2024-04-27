@@ -55,10 +55,14 @@
   <!-- Sobre nosotros -->
 
   <section class="p-8 align-items-center text-white" style="background-color: #1b1d2c">
+    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7 justify-center ">
 
-    <div class="flex sm:flex-col md:flex-col lg:flex-row lg:items-center sm:gap-8 md:gap-6 align-items-center">
-      <h3 class="font-normal Slabo sm:text-3xl md:text-5xl">Sobre Nosotros</h3>
-      <div class="lg:p-4">
+      <Image preview
+        src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
+      alt=""></Image>
+
+      <div class="flex sm:flex-col md:flex-col sm:gap-3 md:gap-3 lg:p-4">
+        <h3 class="font-normal Slabo sm:text-3xl md:text-5xl">Sobre Nosotros</h3>
         <p class="Roboto sm:text-sm md:text-xl md:font-light">
           Somos Kombox, una empresa de ventas ubicada en Perú. Nos
           especializamos en ofrecer soluciones efectivas para impulsar el
@@ -69,10 +73,7 @@
           resultados sobresalientes para nuestros clientes. Confíe en nosotros
           para llevar su estrategia de ventas al siguiente nivel.
         </p>
-        <Image preview
-        src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
-        alt=""></Image>
-        <button class="bg-green-500 rounded-md p-2 text-black font-semibold text-center sm:w-full md:max-w-36">Learn More</button>
+        <button class=" mt-5 bg-green-500 rounded-md p-2 text-black font-semibold text-center sm:w-full md:max-w-36">Learn More</button>
       </div>
     </div>
   </section>
