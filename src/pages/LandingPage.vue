@@ -55,13 +55,16 @@
   <!-- Sobre nosotros -->
 
   <section class="p-8 align-items-center text-white" style="background-color: #1b1d2c">
-    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7 justify-center ">
+    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7">
 
-      <Image preview
+      <div class="flex justify-center">
+        <Image preview
         src="https://kombox.mydurable.com/_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1521791136064-7986c2920216%3Fcrop%3Dentropy%26cs%3Dtinysrgb%26fit%3Dmax%26fm%3Djpg%26ixid%3DM3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA%26ixlib%3Drb-4.0.3%26q%3D80%26w%3D1080&w=1920&q=90"
-      alt=""></Image>
-
-      <div class="flex sm:flex-col md:flex-col sm:gap-3 md:gap-3 lg:p-4">
+        class="lg:max-w-2xl"
+        alt=""></Image>
+      </div>
+        
+      <div class="flex sm:flex-col md:flex-col sm:gap-3 md:gap-3 lg:p-4" >
         <h3 class="font-normal Slabo sm:text-3xl md:text-5xl">Sobre Nosotros</h3>
         <p class="Roboto sm:text-sm md:text-xl md:font-light">
           Somos Kombox, una empresa de ventas ubicada en Perú. Nos
@@ -82,11 +85,11 @@
 
   <section class="pt-5 pb-8" style="background-color: #1b1e2c;">
     <div class="flex flex-col gap-3 p-5 text-white">
-      <h3 class="font-medium text-3xl Slabo text-center pb-3">Tabla de Precios</h3>
-      <div class="flex sm:flex-col md:flex-row justify-content-center gap-3 Slabo ">
+      <h3 class="font-medium sm:text-xl md:text-3xl lg:text-5xl Slabo text-center pb-3">Tabla de Precios</h3>
+      <div class="flex sm:flex-col md:flex-row justify-center gap-3 Slabo ">
 
         <div v-for="(priceItem, index) in Prices" :key="index" 
-            class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 price-img-animation">
+            class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 price-img-animation lg:max-w-lg ">
           <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
 
           <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
@@ -183,8 +186,10 @@
     <div class="relative">
       <iframe :src="location" width="100%" height="400" style="border: 0;" allowfullscreen="true" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="p-4 rounded-md text-white absolute sm:w-10/12 "
-        style="background-color: #232336; top: 20%; left: 8%;">
+      
+      <div class="sm:p-4 md:p-5 lg:p-10 rounded-md text-white absolute sm:w-4/12 md:w-5/12 lg:w-4/12 sm:top-2/4 md:top-3/4 lg:top-10 sm:left-3 md:left-2/4 lg:3/4 lg:"
+
+        style="background-color: #232336;">
         <h3 class="Slabo text-4xl font-semibold">Ubicación</h3>
         <span class="Roboto text-sm">Perú</span>
       </div>
