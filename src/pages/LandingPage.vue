@@ -18,8 +18,8 @@
   </div>
 
   <!-- clientes -->
-  <section class="flex flex-col gap-4 p-8" style="background-color: #12141d">
-    <h2 class="text-white font-semibold sm:text-3xl Slabo">Nuestros Clientes</h2>
+  <section class="flex flex-col gap-4 sm:p-8 md:p-12 lg:p-24" style="background-color: #12141d">
+    <h2 class="text-white font-semibold sm:text-3xl md:text-4xl lg:text-5xl Slabo">Nuestros Clientes</h2>
     <div class="overflow-hidden">
       <div class="carousel">
         <img v-for="(company, index) in companies" :key="index" :src="company" alt="Company Logo"
