@@ -1,8 +1,8 @@
 <template>
 
-  <div class="flex flex-col img-transparent text-white HeroContainerHeigh" >
+  <div class="img-transparent text-white HeroContainerHeigh" >
 
-    <!-- <header class="lg:hidden sm:flex flex-row items-center justify-between p-4">
+    <header class="lg:hidden sm:flex flex-row items-center justify-between p-4">
       <i></i>
       <h2 class="Slabo font-normal text-2xl md:text-center">ETrade</h2>
       <i class="pi pi-align-justify"></i>
@@ -16,16 +16,20 @@
       </ul>
       <h2 class="Slabo font-normal text-2xl md:text-center">ETrade</h2>
       <button class=" mt-5 bg-green-500 rounded-md p-2 text-black font-semibold text-center sm:w-full md:max-w-36">Call Us</button>
-    </header> -->
+    </header>
 
-    <main class="flex flex-col gap-4 sm:p-5 md:text-center">
-      <div class="flex flex-col gap-4 text-start p-4 mx-auto sm:h-auto md:h-96 md:justify-center">
-        <h1 class="Slabo sm:text-4xl md:text-6xl font-medium">Descubre Ofertas Exclusivas Ahora</h1>
-        <p class="text-lg md:pb-10">Encuentra las mejores promociones en tecnología y más, solo por tiempo limitado.</p>
-        <button class="bg-green-500 text-center rounded-md p-2 text-black font-semibold sm:w-full md:max-w-36">Comprar
-          Ya</button>
+    <main class="HeroContainerHeigh flex flex-col gap-4 sm:p-5 md:text-center lg:text-start justify-center">
+
+      <!-- <div class="flex flex-col gap-4 text-start p-4 mx-auto sm:h-auto md:h-96 bg-green-600 md:justify-center">
+      </div> -->
+      <div class="lg:max-w-7xl lg:mx-auto">
+        <h1 class="Slabo sm:text-4xl md:text-6xl font-medium lg:text-8xl lg:max-w-4xl">Descubre Ofertas Exclusivas Ahora</h1>
+        <p class="lg:mt-2 text-lg md:pb-10 lg:text-2xl lg:max-w-2xl">Encuentra las mejores promociones en tecnología y más, solo por tiempo limitado.</p>
+        <button class="bg-green-500 text-center rounded-md sm:p-2 lg:p-3 text-black font-semibold sm:w-full md:max-w-36 lg:text-xl">Comprar Ya</button>
       </div>
+        
     </main>
+
   </div>
 
   <!-- clientes -->
@@ -314,7 +318,7 @@ export default {
 
 <style scoped>
 .img-transparent {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(36, 32, 32, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(36, 32, 32, 0.5)),
     url("https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw2fHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA&ixlib=rb-4.0.3&q=80&w=1080");
   background-size: cover;
   background-repeat: no-repeat;
@@ -391,21 +395,35 @@ export default {
   height: 900px;
 }
 
-/* @media screen and (min-width: 768px) {
-  .HeroContainerHeigh {
-    height: 300px;
-  }
-} */
+.HeroTitleHeigh{
+  height: 800px;
+}
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 300px) {
   .HeroContainerHeigh {
-    height: 500px; 
+    height: auto;
+  }
+  
+  .HeroTitleHeigh{
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .HeroContainerHeigh {
+    height: auto; 
+  }
+  .HeroTitleHeigh{
+    height: auto;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .HeroContainerHeigh {
     height: 900px;
+  }
+  .HeroTitleHeigh{
+    height: 700px;
   }
 }
 
