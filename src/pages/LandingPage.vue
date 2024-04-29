@@ -1,11 +1,22 @@
 <template>
 
-  <div class="img-transparent text-white">
-    <header class="p-4 flex flex-row items-center sm:justify-between">
+  <div class="flex flex-col img-transparent text-white HeroContainerHeigh" >
+
+    <!-- <header class="lg:hidden sm:flex flex-row items-center justify-between p-4">
       <i></i>
       <h2 class="Slabo font-normal text-2xl md:text-center">ETrade</h2>
       <i class="pi pi-align-justify"></i>
     </header>
+
+    <header class="sm:hidden lg:flex flex-row items-center justify-between pt-5 mx-9">
+      <ul class="Roboto flex flex-row gap-8">
+        <ol class="text-lg hover:underline cursor-pointer select-none">Services</ol>
+        <ol class="text-lg hover:underline cursor-pointer select-none">Gallery</ol>
+        <ol class="text-lg hover:underline cursor-pointer select-none">Home</ol>
+      </ul>
+      <h2 class="Slabo font-normal text-2xl md:text-center">ETrade</h2>
+      <button class=" mt-5 bg-green-500 rounded-md p-2 text-black font-semibold text-center sm:w-full md:max-w-36">Call Us</button>
+    </header> -->
 
     <main class="flex flex-col gap-4 sm:p-5 md:text-center">
       <div class="flex flex-col gap-4 text-start p-4 mx-auto sm:h-auto md:h-96 md:justify-center">
@@ -372,6 +383,30 @@ export default {
 
 .carousel-item:nth-child(5) {
   animation-delay: 1s;
+}
+
+/* ------------ */
+
+.HeroContainerHeigh{
+  height: 900px;
+}
+
+/* @media screen and (min-width: 768px) {
+  .HeroContainerHeigh {
+    height: 300px;
+  }
+} */
+
+@media screen and (min-width: 769px) {
+  .HeroContainerHeigh {
+    height: 500px; 
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .HeroContainerHeigh {
+    height: 900px;
+  }
 }
 
 </style>
