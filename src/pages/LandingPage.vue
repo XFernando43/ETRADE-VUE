@@ -33,12 +33,12 @@
   </div>
 
   <!-- clientes -->
-  <section class="flex flex-col gap-4 sm:p-8 md:p-12 lg:p-24" style="background-color: #12141d">
+  <section class="select-none flex flex-col gap-4 sm:p-8 md:p-12 lg:p-24" style="background-color: #12141d">
     <h2 class="text-white font-semibold sm:text-3xl md:text-4xl lg:text-5xl Slabo">Nuestros Clientes</h2>
     <div class="overflow-hidden">
       <div class="carousel">
         <img v-for="(company, index) in companies" :key="index" :src="company" alt="Company Logo"
-          class="carousel-item img sm:max-h-7 md:max-h-14 opacity-50 h-auto my-4 mx-6" style="filter: contrast(0%) brightness(200%);" />
+          class="pointer-events-none carousel-item img sm:max-h-7 md:max-h-14 opacity-50 h-auto my-4 mx-6" style="filter: contrast(0%) brightness(200%);" />
       </div>
     </div>
   </section>
@@ -48,10 +48,10 @@
   <section class="p-5" style="background-color: #1b1d2c">
     <div class="flex flex-col gap-5 p-3 text-white">
       <h3 class="sm:text-3xl Slabo md:text-5xl">Mis Servicios</h3>
-      <div class="sm:flex sm:flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row  gap-6">
+      <div class="sm:flex sm:flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row gap-6 select-none">
         
         <div v-for="(serviceItem, index) in service" :key="index" class="relative border-round-2xl overflow-hidden">
-          <img preview :src="serviceItem.url" :alt="serviceItem.title" class="" style="object-fit: cover" />
+          <img preview :src="serviceItem.url" :alt="serviceItem.title" class="pointer-events-none" style="object-fit: cover" />
 
           <div class="absolute bottom-0 left-0 right-0 p-3" style="background-color: rgba(0, 0, 0, 0.9)">
             <h3 class="Slabo sm:text-lg ">
@@ -70,7 +70,7 @@
   <!-- Sobre nosotros -->
 
   <section class="p-8 align-items-center text-white" style="background-color: #1b1d2c">
-    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7 md:mt-16 md:mb-16 lg:mt-28 lg:mb-28">
+    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7 md:mt-16 md:mb-16 lg:mt-24 lg:mb-24">
 
       <div class="flex justify-center">
         <Image preview
@@ -104,8 +104,8 @@
       <div class="flex sm:flex-col md:flex-row justify-center gap-3 Slabo ">
 
         <div v-for="(priceItem, index) in Prices" :key="index" 
-            class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 lg:max-w-lg price-img-animation  hover:transform hover:scale-105 hover:transition-transform hover:duration-500 hover:ease-in-out">
-          <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
+            class="select-none border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 lg:max-w-lg price-img-animation hover:transform hover:scale-105 hover:transition-transform hover:duration-500 hover:ease-in-out">
+          <img :src="priceItem.img" :alt="priceItem.name" class=" rounded-md pointer-events-none" />
 
           <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
           <div class="flex flex-row items-center gap-3" style="line-height: 25px">
@@ -134,12 +134,12 @@
 
   <section class="p-10" style="background-color: #1b1e2c;">
     <Carousel :showIndicators="false" :value="testimonials" :num-visible="1" :num-scroll="1" circular
-      :autoplayInterval="4000" class="lg:max-w-7xl mx-auto h-2/3 md:mt-16 md:mb-16 lg:mt-32 lg:mb-32">
+      :autoplayInterval="4000" class="lg:max-w-7xl mx-auto h-2/3 md:mt-16 md:mb-16 lg:mt-20 lg:mb-20">
       <template #item="slotProps">
 
         <div class="flex flex-col gap-12 justify-content-center text-white p-4">
-          <img :src="slotProps.data.img" alt="person" class="sm:max-w-32 sm:max-h-40 rounded-2xl">
-          <p class="Slabo sm:text-xl md:text-3xl lg:text-4xl">{{ slotProps.data.texto }}</p>
+          <img :src="slotProps.data.img" alt="person" class="sm:max-w-32 sm:max-h-40 rounded-2xl pointer-events-none">
+          <p class="Slabo sm:text-xl md:text-3xl lg:text-4xl select-none">{{ slotProps.data.texto }}</p>
           <label class="Barlow">- {{ slotProps.data.owner }}</label>
         </div>
       </template>
@@ -411,7 +411,7 @@ export default {
 
 @media screen and (min-width: 650px) {
   .HeroContainerHeigh {
-    height: auto; 
+    height: 500px; 
   }
   .HeroTitleHeigh{
     height: auto;
