@@ -20,10 +20,10 @@
   <!-- clientes -->
   <section class="flex flex-col gap-4 p-8" style="background-color: #12141d">
     <h2 class="text-white font-semibold sm:text-3xl Slabo">Nuestros Clientes</h2>
-    <div class="carousel-container">
+    <div class="overflow-hidden">
       <div class="carousel">
         <img v-for="(company, index) in companies" :key="index" :src="company" alt="Company Logo"
-          class="carousel-item img sm:max-h-7 md:max-h-14" />
+          class="carousel-item img sm:max-h-7 md:max-h-14 opacity-50 h-auto my-4 mx-6" style="filter: contrast(0%) brightness(200%);" />
       </div>
     </div>
   </section>
@@ -55,7 +55,7 @@
   <!-- Sobre nosotros -->
 
   <section class="p-8 align-items-center text-white" style="background-color: #1b1d2c">
-    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7">
+    <div class="sm:flex md:flex sm:flex-col md:flex-col lg:grid lg:grid-cols-2 lg:items-center sm:gap-3 md:gap-7 md:mt-16 md:mb-16 lg:mt-28 lg:mb-28">
 
       <div class="flex justify-center">
         <Image preview
@@ -83,13 +83,13 @@
 
   <!-- Tabla de precios   -->
 
-  <section class="pt-5 pb-8" style="background-color: #1b1e2c;">
-    <div class="flex flex-col gap-3 p-5 text-white">
+  <section class="pt-5 pb-8 " style="background-color: #1b1e2c;">
+    <div class="flex flex-col gap-3 p-5 text-white md:mt-16 md:mb-16 lg:mt-28 lg:mb-28">
       <h3 class="font-medium sm:text-xl md:text-3xl lg:text-5xl Slabo text-center pb-3">Tabla de Precios</h3>
       <div class="flex sm:flex-col md:flex-row justify-center gap-3 Slabo ">
 
         <div v-for="(priceItem, index) in Prices" :key="index" 
-            class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 price-img-animation lg:max-w-lg ">
+            class="border-2 rounded-md flex flex-col gap-2 border-white-alpha-90 p-3 lg:max-w-lg price-img-animation  hover:transform hover:scale-105 hover:transition-transform hover:duration-500 hover:ease-in-out">
           <img :src="priceItem.img" :alt="priceItem.name" class="border-round" />
 
           <h4 class="Slobe text-4xl font-normal">{{ priceItem.name }}</h4>
@@ -117,9 +117,9 @@
 
   <!-- Testimonials -->
 
-  <section class="p-8 flex flex-col" style="background-color: #1b1e2c;">
+  <section class="p-10" style="background-color: #1b1e2c;">
     <Carousel :showIndicators="false" :value="testimonials" :num-visible="1" :num-scroll="1" circular
-      :autoplayInterval="4000">
+      :autoplayInterval="4000" class="lg:max-w-7xl mx-auto h-2/3 md:mt-16 md:mb-16 lg:mt-32 lg:mb-32">
       <template #item="slotProps">
 
         <div class="flex flex-col gap-12 justify-content-center text-white p-4">
@@ -135,9 +135,9 @@
   <!-- Contact -->
 
   <section class="p-7" style="background-color: #232336;">
-    <div class="flex sm:flex-col md:flex-col lg:flex-row justify-center gap-4 text-white">
+    <div class="flex sm:flex-col md:flex-col lg:flex-row justify-center gap-4 text-white md:mt-16 md:mb-16 lg:mt-28 lg:mb-28">
 
-      <div class="flex flex-col gap-4 justify-content-center p-4">
+      <div class="flex flex-col gap-4 justify-center p-4">
         <h3 class="Slabo text-4xl">Ponerse en contacto</h3>
         <p class="Roboto ">Envianos un mensaje y nos comunicaremos contigo tan pronto como sea posible</p>
       </div>
@@ -216,10 +216,14 @@ export default {
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/606eab41e554977bf2901ec3_oktana.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/606e9f6ed270a03e3814b22b_finvoice.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe3bc563181f1b2745959_Logotipo.png",
+        "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/609aca115d254d21ea91e8da_Globant.png",
+        "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe2696fd3c91d5a387fa4_Rappi_logo.svg-p-500.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/634ed8afeea2b5729709a33a_nttdata-p-500.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe269366f330426311e9d_img-logos-web-bsale-blanco-footer.png",
+        "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/606e9f6ed270a03e3814b22b_finvoice.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe2696fd3c91e47387fa3_Logos-Draftea-azul-p-500.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe269b7461d8176d617c1_logo-buk-bajada-2021-02-e1640188972198.png",
+        "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe2696fd3c91e47387fa3_Logos-Draftea-azul-p-500.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/629fe2696fd3c91d5a387fa4_Rappi_logo.svg-p-500.png",
         "https://assets-global.website-files.com/6043ed3109ebdb7c9484f446/609ace96c2b34f5ebc9a44f8_kushki.png",
       ],
@@ -298,11 +302,6 @@ export default {
 </script>
 
 <style scoped>
-.price-img-animation:hover {
-  transform: scale(1.15);
-  transition: transform 0.5s ease;
-}
-
 .img-transparent {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(36, 32, 32, 0.5)),
     url("https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHw2fHxTYWxlc3xlbnwwfHx8fDE3MTE3Mzc3ODV8MA&ixlib=rb-4.0.3&q=80&w=1080");
@@ -310,35 +309,6 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
 
-}
-
-.title-width {
-  max-width: 800px;
-  line-height: 100px;
-}
-
-.paragraph-width {
-  max-width: 700px;
-}
-
-.principal-container {
-  height: 800px;
-}
-
-.container-width {
-  width: 1200px;
-}
-
-.img {
-  opacity: 0.5;
-  filter: contrast(0%) brightness(200%);
-  height: auto;
-  /* max-height: 28px; */
-  margin: 16px 24px;
-}
-
-.carousel-container {
-  overflow: hidden;
 }
 
 .carousel {
@@ -351,15 +321,12 @@ export default {
   margin-right: 16px;
 }
 
-/* Agrega este estilo para crear el efecto de bucle */
 .carousel-item:first-child {
   margin-left: -16px;
-  /* Espacio negativo igual al espacio entre las imágenes */
 }
 
 .carousel-item:last-child {
   margin-right: 0;
-  /* Elimina el espacio entre la última imagen y el contenedor */
 }
 
 @keyframes carousel-animation {
@@ -372,29 +339,22 @@ export default {
   }
 }
 
-/* Define la animación de entrada */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    /* Comienza con opacidad 0 */
   }
 
   to {
     opacity: 1;
-    /* Termina con opacidad 1 */
   }
 }
 
-/* Aplica la animación de entrada a las imágenes */
 .carousel-item {
   flex: 0 0 auto;
   margin-right: 16px;
-  /* Espacio entre las imágenes */
   animation: fadeIn 0.5s ease-in-out;
-  /* Aplica la animación de entrada */
 }
 
-/* Agrega un retraso progresivo a cada imagen */
 .carousel-item:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -406,6 +366,12 @@ export default {
 .carousel-item:nth-child(3) {
   animation-delay: 0.6s;
 }
+.carousel-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
 
-/* Y así sucesivamente para cada imagen */
+.carousel-item:nth-child(5) {
+  animation-delay: 1s;
+}
+
 </style>
