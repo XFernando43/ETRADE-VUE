@@ -1,4 +1,7 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
+
 import './style.css'
 import App from './App.vue'
 import router from './router';
@@ -26,10 +29,12 @@ import Avatar from 'primevue/avatar';
 import Textarea from 'primevue/textarea';
 
 
-
+const pinia = createPinia()
 const app = createApp(App);
-app.use(PrimeVue);
 
+
+app.use(pinia)
+app.use(PrimeVue);
 
 app.component('Button', Button);
 app.component('Dropdown', Dropdown);

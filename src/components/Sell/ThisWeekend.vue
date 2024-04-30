@@ -1,6 +1,6 @@
 <template>
 
-    <div class="pt-5 max-w-7xl mx-auto">
+    <section class="pt-5 max-w-7xl mx-auto">
 
         <header class="flex flex-col gap-3">
             <div class="flex flex-row gap-3 items-center">
@@ -27,7 +27,7 @@
             </Carousel>
         </body>
 
-    </div>
+    </section>
 
 </template>
 

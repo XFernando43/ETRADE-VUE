@@ -1,11 +1,12 @@
 <template>
-    <Topbar></Topbar>
+    <!-- <Topbar></Topbar>
     <OptionsBar/>
     <HeroProducts/>
     <PolicesItems/>
     <BestSeller/>
     <ThisWeekend/> 
-    <DontMiss/>
+    <DontMiss/> -->
+    <ExploreProducts/>
 
 </template>
 
@@ -18,6 +19,7 @@
     import PolicesItems from '../components/Sell/PolicesItems.vue';
     import ThisWeekend from '../components/Sell/ThisWeekend.vue';
     import DontMiss from '../components/Sell/DontMiss.vue';
+    import ExploreProducts from '../components/Sell/ExploreProducts.vue';
 
     export default{
         data(){
@@ -32,8 +34,9 @@
             BestSeller,
             PolicesItems,
             ThisWeekend,
-            DontMiss
-        }
+            DontMiss,
+            ExploreProducts
+        },
     }
 
 </script>
