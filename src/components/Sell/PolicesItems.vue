@@ -1,10 +1,10 @@
 <template>
-    <div class="flex flex-row gap-4 justify-content-center">
+    <div class="p-2 flex flex-row gap-4 justify-center">
 
-        <Card class="shadow-4 w-17rem h-14rem flex flex-column justify-content-center align-items-center">
+        <Card class="shadow-4 w-17rem h-14rem flex flex-col justify-center items-center">
             <template #header>
                 <div class="mt-5">
-                    <img class="w-full" src="../../assets/images/icons/service1.png">
+                    <img src="../../assets/images/icons/service1.png">
                 </div>
             </template>
             <template #title>
@@ -12,7 +12,7 @@
             </template>
         </Card>
 
-        <Card class="shadow-4 w-17rem flex flex-column justify-content-center align-items-center">
+        <Card class="shadow-4 w-17rem flex flex-col justify-center items-center">
             <template #header>
                 <div class="mt-5">
                     <img src="../../assets/images/icons/service2.png">
@@ -23,7 +23,7 @@
             </template>
         </Card>
 
-        <Card class="shadow-4 w-17rem flex flex-column justify-content-center align-items-center">
+        <Card class="shadow-4 w-17rem flex flex-col justify-center items-center">
             <template #header>
                 <div class="mt-5">
                     <img src="../../assets/images/icons/service3.png">
@@ -34,7 +34,7 @@
             </template>
         </Card>
 
-        <Card class="shadow-4 w-17rem flex flex-column justify-content-center align-items-center">
+        <Card class="shadow-4 w-17rem flex flex-col justify-center items-center">
             <template #header>
                 <div class="mt-5">
                     <img src="../../assets/images/icons/service4.png">
@@ -45,7 +45,7 @@
             </template>
         </Card>
 
-        <Card class="shadow-4 w-17rem flex flex-column justify-content-center align-items-center">
+        <Card class="shadow-4 w-17rem flex flex-col justify-center items-center">
             <template #header>
                 <div class="mt-5">
                     <img src="../../assets/images/icons/service5.png">

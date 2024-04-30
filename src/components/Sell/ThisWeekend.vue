@@ -1,41 +1,41 @@
 <template>
 
-    <div class="card shadow-4 flex flex-column">
-        
-        <header class="p-4">
-            <p class="flex gap-2 align-items-center justify-content font-bold text-teal-500">
-                <Tag value="Stock" severity="success" />
-                This Week
-            </p>
-            <h1 class="font-bold" >New Arrivals</h1>
+    <div class="pt-5 max-w-7xl mx-auto">
+
+        <header class="flex flex-col gap-3">
+            <div class="flex flex-row gap-3 items-center">
+                <i class="pi pi-shopping-bag bg-violet-500 text-white rounded-full text-sm p-2"></i>
+                <span class="Roboto text-sm font-semibold text-violet-600">This Week's</span>
+            </div>
+            <h1 class="Roboto font-semibold text-5xl">New Arrivals</h1>
         </header>
-        
+
         <body>
-            <Carousel :showNavigators="false" :value="products" :numVisible="5" :numScroll="1" circular :autoplayInterval="4000">
+            <Carousel :showNavigators="false" :value="products" :numVisible="5" :numScroll="1" circular
+                :autoplayInterval="4000">
                 <template #item="slotProps">
-                    <div class="border-3 border-blue-50 border-round m-2 p-3">
-                        <div class="mb-3">
+                    <div class="border-3 border-blue-50 border-round pr-5 pt-4">
                             <div class="relative mx-auto">
-                                <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg" class="w-full border-round" preview />
-                                <Tag value="UnStock" severity="danger" class="absolute" style="left: 5px; top: 5px" />
+                                <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg"
+                                    class=" rounded-md" preview />
+                                <Tag value="UnStock" severity="danger" class="absolute left-1 top-1"/>
                             </div>
-                        </div>
                         <div class="mb-3 font-bold text-center">{{ slotProps.data.name }}</div>
                         <div class="mb-3 font-medium text-center">{{ slotProps.data.price }} $</div>
                     </div>
                 </template>
             </Carousel>
-
-
         </body>
+
     </div>
 
 </template>
 
 
-<script lang="ts"> 
-    export default{
-        data() {
+
+<script lang="ts">
+export default {
+    data() {
         return {
             products: [
                 {
@@ -106,5 +106,5 @@
             ],
         };
     },
-    }
+}
 </script>
