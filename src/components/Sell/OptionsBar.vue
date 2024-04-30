@@ -1,26 +1,18 @@
 <template>
-    <div class="optionsBar">
+    <div class="flex flex-row justify-between items-center p-6 mt-2 mx-auto md:max-w-7xl">
         
-        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name"
+        <CascadeSelect v-model="selectedCity" :options="countries" optionLabel="cname" optionGroupLabel="name" class="border border-green-400"
                         :optionGroupChildren="['states', 'cities']" style="min-width: 14rem" placeholder="Select a City" />
 
-        <div class="menu-item" v-for="(item, index) in menuItems" :key="index">
-            <span>{{ item }}</span>
+        <div class="hidden md:flex menu-item" v-for="(item, index) in menuItems" :key="index">
+            <span class="Roboto sm:text-xs md:text-sm lg:text-lg">{{ item }}</span>
             <div class="underline"></div>
         </div>
 
-        <div class="icons-group">
-            <Button rounded text>
-                <i  v-badge="2" class="pi pi-heart" ></i>         
-            </Button>
-
-            <Button rounded text>
-                <i v-badge="10" class="pi pi-shopping-cart"></i>
-            </Button>
-            
-            <Button rounded text>
-                <i class="pi pi-user"></i>
-            </Button>
+        <div class="flex flex-row gap-4">
+            <Button> <i class="pi pi-heart"></i> </Button>
+            <Button> <i class="pi pi-shopping-cart"></i> </Button>
+            <Button> <i class="pi pi-user"></i> </Button>
         </div>
 
     </div>
@@ -122,18 +114,7 @@ export default {
 </script>
 
 <style scoped>
-    .optionsBar {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 0;
-        padding-left: 310px;
-        padding-right: 310px;
-        background: #f7f7f7;
-        margin-top: 1rem;
-
-    }
+   
     .menu-item {
         position: relative;
         cursor: pointer;
@@ -151,8 +132,5 @@ export default {
     .menu-item:hover .underline {
         width: 100%;
     }
-    .icons-group {
-        display: flex;
-        flex-direction: row;
-    }
+  
 </style>

@@ -1,12 +1,12 @@
 <template>
     <Topbar></Topbar>
     <OptionsBar/>
-    
     <HeroProducts/>
-
     <BestSeller/>
+    
+    <!-- 
     <PolicesItem/>
-    <ThisWeekend/>
+    <ThisWeekend/> -->
     <!-- <HeroProducts/> -->
 
 </template>
@@ -15,10 +15,10 @@
 <script lang="ts">
     import Topbar from '../components/commons/Topbar.vue';
     import OptionsBar from '../components/Sell/OptionsBar.vue';
-    import BestSeller from '../components/Sell/BestSeller.vue';
     import HeroProducts from '../components/Sell/HeroProducts.vue';
-    import PolicesItem from '../components/Sell/PolicesItems.vue';
-    import ThisWeekend from '../components/Sell/ThisWeekend.vue';
+    import BestSeller from '../components/Sell/BestSeller.vue';
+    // import PolicesItem from '../components/Sell/PolicesItems.vue';
+    // import ThisWeekend from '../components/Sell/ThisWeekend.vue';
 
     export default{
         data(){
@@ -30,10 +30,7 @@
             Topbar,
             OptionsBar,
             HeroProducts,
-            BestSeller,
-            HeroProducts,
-            PolicesItem,
-            ThisWeekend
+            BestSeller
         }
     }
 

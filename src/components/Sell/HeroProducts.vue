@@ -1,14 +1,16 @@
 <template>
-    <div class="flex flex-row justify-content-center gap-3 ">
+    
+    <div class="grid grid-cols-2 gap-3 max-w-6xl mx-auto">
 
-        <div class="card max-w-30rem shadow-7">
-            <Carousel :value="products" :showNavigators="false" :numVisible="1" :numScroll="1" circular :autoplayInterval="4000">
+        <div class="card flex justify-center items-center ">
+            <Carousel :value="products" :showNavigators="true" :numVisible="1" :numScroll="1" circular :autoplayInterval="4000" 
+                        class=" max-w-2xl">
                 <template #item="slotProps">
-                    <div class="">
+                    <div class="text-center">
                         <div class="mb-3">
                             <div class="relative mx-auto">
                                 <img src="https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg"
-                                    class="w-full border-round" preview />
+                                    class=" rounded-md shadow-xl" preview />
                                 <Tag value="Stock" severity="success" class="absolute" style="left: 5px; top: 5px" />
                             </div>
                         </div>
@@ -20,13 +22,11 @@
         </div>
 
         <!-- Recordar cambiarlo con la api debe haber una sección de Ofertas -->
-        <div class="flex flex-column justify-content-center text-center border-round-lg shadow-7">
-            <Image src="https://milanobagsstore.com/images_product/cartera-tote-bag-ds-3403-color-marron-1-large.png" alt="Image" width="250"/>
+        <div class=" flex flex-col justify-center items-center">
+            <Image src="https://milanobagsstore.com/images_product/cartera-tote-bag-ds-3403-color-marron-1-large.png" class="max-w-72" alt="Image" width="250"/>
             <label>Stylish Leather Bag</label>
             <span>$29.99</span>
         </div>
- 
-
 
     </div>
 
@@ -47,7 +47,27 @@ export default {
                 },
                 {
                     name: "Laptop Gtx540",
-                    price: 2300,
+                    price: 1300,
+                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
+                },
+                {
+                    name: "Laptop Gtx540",
+                    price: 100,
+                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
+                },
+                {
+                    name: "Laptop Gtx540",
+                    price: 7300,
+                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
+                },
+                {
+                    name: "Laptop Gtx540",
+                    price: 8300,
+                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
+                },
+                {
+                    name: "Laptop Gtx540",
+                    price: 300,
                     url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
                 },
                 {
@@ -57,27 +77,7 @@ export default {
                 },
                 {
                     name: "Laptop Gtx540",
-                    price: 2300,
-                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
-                },
-                {
-                    name: "Laptop Gtx540",
-                    price: 2300,
-                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
-                },
-                {
-                    name: "Laptop Gtx540",
-                    price: 2300,
-                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
-                },
-                {
-                    name: "Laptop Gtx540",
-                    price: 2300,
-                    url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
-                },
-                {
-                    name: "Laptop Gtx540",
-                    price: 2300,
+                    price: 56300,
                     url: "https://www.muypymes.com/wp-content/uploads/2016/04/hp_spectre.jpg",
                 },
                 {
